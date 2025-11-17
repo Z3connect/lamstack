@@ -104,7 +104,7 @@ const DigitalTransformation = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding bg-gradient-to-br from-cyan-50 to-blue-50">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">

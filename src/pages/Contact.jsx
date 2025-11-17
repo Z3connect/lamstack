@@ -13,10 +13,14 @@ const Contact = () => {
       />
 
       {/* Hero */}
-      <section className="section-padding bg-gradient-to-br from-purple-50 via-white to-cyan-50">
-        <div className="container-custom max-w-4xl text-center">
+      <section className="relative section-padding bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        <div className="container-custom max-w-4xl text-center relative z-10">
           <h1 className="mb-6 animate-fadeInDown">
-            Let's <span className="gradient-text animate-gradient">Start a Conversation</span>
+            Let's <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient">Start a Conversation</span>
           </h1>
           <p className="text-xl md:text-2xl text-base-secondary animate-fadeInUp animate-delay-200">
             Whether you're hiring or looking for opportunities, we're here to help.
@@ -25,7 +29,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Info */}

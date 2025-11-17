@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Employers from './pages/Employers';
-import Candidates from './pages/Candidates';
 import Jobs from './pages/Jobs';
 import JobDetail from './pages/JobDetail';
 import CaseStudies from './pages/CaseStudies';
@@ -25,7 +24,6 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="employers" element={<Employers />} />
-        <Route path="candidates" element={<Candidates />} />
         <Route path="jobs" element={<Jobs />} />
         <Route path="jobs/:id" element={<JobDetail />} />
         <Route path="case-studies" element={<CaseStudies />} />

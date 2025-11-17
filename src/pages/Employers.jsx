@@ -74,46 +74,6 @@ const Employers = () => {
     },
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Contingent',
-      price: '15-20%',
-      description: 'Pay only when you hire',
-      features: [
-        'No upfront fees',
-        'Multiple candidates per role',
-        '60-day replacement guarantee',
-        'Ideal for individual roles',
-      ],
-      cta: 'Get Started',
-    },
-    {
-      name: 'Retained',
-      price: '25-30%',
-      description: 'Premium search with guaranteed delivery',
-      features: [
-        'Exclusive partnership',
-        'Guaranteed shortlist delivery',
-        'Market mapping & insights',
-        'Best for senior/executive roles',
-      ],
-      cta: 'Contact Sales',
-      featured: true,
-    },
-    {
-      name: 'RPO Subscription',
-      price: 'Custom',
-      description: 'Embedded recruitment team',
-      features: [
-        'Dedicated recruiters',
-        'Volume hiring support',
-        'Process & tech setup',
-        'Ideal for scaling companies',
-      ],
-      cta: 'Book Demo',
-    },
-  ];
-
   const guarantees = [
     '60-day replacement guarantee',
     '72-hour shortlist delivery (for urgent roles)',
@@ -147,11 +107,15 @@ const Employers = () => {
       />
 
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-purple-50 via-white to-cyan-50">
-        <div className="container-custom">
+      <section className="relative section-padding bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="leading-tight">
-              Recruitment That Ships <span className="gradient-text">Offers, Not CV Piles</span>
+              Recruitment That Ships <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient">Offers, Not CV Piles</span>
             </h1>
             <p className="text-xl md:text-2xl text-base-secondary">
               Your hiring partner for tech, leadership, and project staffing.
@@ -169,7 +133,7 @@ const Employers = () => {
       </section>
 
       {/* Services Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Our Services</h2>
@@ -201,7 +165,7 @@ const Employers = () => {
       </section>
 
       {/* Process Timeline */}
-      <section className="section-padding bg-base-bg">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">How It Works</h2>
@@ -233,56 +197,8 @@ const Employers = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">Pricing Models</h2>
-            <p className="text-lg text-base-secondary max-w-2xl mx-auto">
-              Flexible pricing to match your hiring needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <Card
-                key={index}
-                className={`p-4 md:p-8 ${plan.featured ? 'ring-2 ring-primary-start shadow-xl md:scale-105' : ''}`}
-              >
-                {plan.featured && (
-                  <div className="text-xs font-bold text-primary-start uppercase tracking-wide mb-2">
-                    Most Popular
-                  </div>
-                )}
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold gradient-text">{plan.price}</span>
-                  {plan.price !== 'Custom' && <span className="text-base-secondary ml-2">of annual salary</span>}
-                </div>
-                <p className="text-base-secondary mb-6">{plan.description}</p>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <svg className="w-5 h-5 text-primary-start mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/contact">
-                  <Button variant={plan.featured ? 'primary' : 'secondary'} className="w-full">
-                    {plan.cta}
-                  </Button>
-                </Link>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Guarantees Section */}
-      <section className="section-padding bg-base-bg">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Our Guarantees</h2>
@@ -305,7 +221,7 @@ const Employers = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Frequently Asked Questions</h2>
@@ -348,7 +264,7 @@ const Employers = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-primary text-white">
+      <section className="section-padding bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 text-white">
         <div className="container-custom text-center">
           <h2 className="text-white mb-4">Ready to Start Hiring?</h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">

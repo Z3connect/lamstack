@@ -14,11 +14,15 @@ const CaseStudies = () => {
       />
 
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-purple-50 via-white to-cyan-50">
-        <div className="container-custom">
+      <section className="relative section-padding bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="leading-tight">
-              <span className="gradient-text">Success Stories</span> from Our Clients
+              <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient">Success Stories</span> from Our Clients
             </h1>
             <p className="text-xl md:text-2xl text-base-secondary">
               Real results from real companies
@@ -28,7 +32,7 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="section-padding">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {caseStudiesData.map((caseStudy, index) => (
@@ -74,7 +78,7 @@ const CaseStudies = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-primary text-white">
+      <section className="section-padding bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 text-white">
         <div className="container-custom text-center">
           <h2 className="text-white mb-4">Want Similar Results?</h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">

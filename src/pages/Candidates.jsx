@@ -73,11 +73,15 @@ const Candidates = () => {
       />
 
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-purple-50 via-white to-cyan-50">
-        <div className="container-custom">
+      <section className="relative section-padding bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="leading-tight">
-              Land Roles You'll <span className="gradient-text">Actually Want to Keep</span>
+              Land Roles You'll <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient">Actually Want to Keep</span>
             </h1>
             <p className="text-xl md:text-2xl text-base-secondary">
               We connect you to companies that value talent and culture.
@@ -95,7 +99,7 @@ const Candidates = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Why Work With Us</h2>
@@ -117,7 +121,7 @@ const Candidates = () => {
       </section>
 
       {/* Process Section */}
-      <section className="section-padding bg-base-bg">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">How It Works</h2>
@@ -141,7 +145,7 @@ const Candidates = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Success Stories</h2>
@@ -170,7 +174,7 @@ const Candidates = () => {
       </section>
 
       {/* Join Talent Network Form */}
-      <section id="join-network" className="section-padding bg-base-bg">
+      <section id="join-network" className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
@@ -258,7 +262,7 @@ const Candidates = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-primary text-white">
+      <section className="section-padding bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 text-white">
         <div className="container-custom text-center">
           <h2 className="text-white mb-4">Ready to Accelerate Your Career?</h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">

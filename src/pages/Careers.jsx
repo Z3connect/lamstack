@@ -30,10 +30,14 @@ const Careers = () => {
       />
 
       {/* Hero */}
-      <section className="section-padding bg-gradient-to-br from-purple-50 via-white to-cyan-50">
-        <div className="container-custom max-w-4xl text-center">
+      <section className="relative section-padding bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        <div className="container-custom max-w-4xl text-center relative z-10">
           <h1 className="mb-6">
-            Join <span className="gradient-text">Our Mission</span>
+            Join <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient">Our Mission</span>
           </h1>
           <p className="text-xl md:text-2xl text-base-secondary">
             Help us transform how companies hire and how talent finds opportunities
@@ -42,7 +46,7 @@ const Careers = () => {
       </section>
 
       {/* Open Roles */}
-      <section className="section-padding">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Open Positions</h2>
