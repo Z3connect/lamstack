@@ -14,7 +14,7 @@ const Header = () => {
       
       // Detect if we're in a black section (services or testimonials)
       const sections = document.querySelectorAll('section');
-      const scrollPosition = window.scrollY + 100; // Offset for navbar height
+      const scrollPosition = window.scrollY + 80; // Offset for navbar height (reduced nav)
       
       let inBlackSection = false;
       sections.forEach(section => {
@@ -77,24 +77,24 @@ const Header = () => {
       )}
 
       <div className="container-custom relative z-10">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo with glow effect */}
           <Link to="/" className="flex items-center group relative">
             <div className="absolute inset-0 bg-cyan-400 blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-500 rounded-full"></div>
             <img 
               src={logoWhite} 
               alt="Lamstacks" 
-              className="h-20 md:h-28 lg:h-32 w-auto relative z-10 group-hover:scale-110 transition-transform duration-500 filter drop-shadow-2xl" 
+              className="h-12 md:h-16 lg:h-20 w-auto relative z-10 group-hover:scale-110 transition-transform duration-500 filter drop-shadow-2xl" 
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-2">
+          <nav className="hidden lg:flex items-center space-x-1.5">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className="relative px-5 py-2.5 text-cyan-100 hover:text-white font-semibold transition-all duration-300 rounded-xl group overflow-hidden"
+                className="relative px-3.5 py-1.5 text-cyan-100 hover:text-white font-semibold transition-all duration-300 rounded-xl group overflow-hidden text-sm"
               >
                 {/* Hover background effect */}
                 <span className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></span>
@@ -117,7 +117,7 @@ const Header = () => {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <button className="relative px-5 py-2.5 text-cyan-100 hover:text-white font-semibold transition-all duration-300 rounded-xl overflow-hidden flex items-center space-x-2">
+              <button className="relative px-3.5 py-1.5 text-cyan-100 hover:text-white font-semibold transition-all duration-300 rounded-xl overflow-hidden flex items-center space-x-2 text-sm">
                 {/* Hover background effect */}
                 <span className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></span>
                 <span className="absolute inset-0 border-2 border-transparent group-hover:border-cyan-400/50 rounded-xl transition-all duration-300"></span>
@@ -186,10 +186,10 @@ const Header = () => {
           </nav>
 
           {/* Premium CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3">
             <Link 
               to="/contact" 
-              className="group relative px-8 py-3.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold rounded-xl transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-cyan-500/50 hover:scale-110 overflow-hidden"
+              className="group relative px-5 py-2.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold rounded-xl transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-cyan-500/50 hover:scale-105 overflow-hidden text-sm md:text-base"
             >
               {/* Animated background */}
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -198,11 +198,11 @@ const Header = () => {
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
               
               <span className="relative z-10 flex items-center space-x-2">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
                 <span>Let's Talk</span>
-                <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </span>
@@ -212,12 +212,12 @@ const Header = () => {
           {/* Mobile Menu Button with Modern Design */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden relative p-3 text-cyan-100 hover:text-white rounded-xl transition-all duration-300 group overflow-hidden"
+            className="lg:hidden relative p-2.5 text-cyan-100 hover:text-white rounded-xl transition-all duration-300 group overflow-hidden"
             aria-label="Toggle menu"
           >
             <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></span>
             <svg
-              className="w-7 h-7 relative z-10 transition-transform duration-300 group-hover:scale-110"
+              className="w-6 h-6 relative z-10 transition-transform duration-300 group-hover:scale-110"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
