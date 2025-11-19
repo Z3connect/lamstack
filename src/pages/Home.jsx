@@ -1,9 +1,26 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import SEO from '../components/SEO';
 import Button from '../components/Button';
 import Card from '../components/Card';
 
 const Home = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const services = [
     {
       title: 'Tech Hiring',
@@ -55,6 +72,19 @@ const Home = () => {
     },
   ];
 
+  const solutions = [
+    { title: 'Strategic Staffing', description: 'Aligning talent with your business goals.' },
+    { title: 'Cloud Architecture', description: 'Building robust and scalable infrastructure.' },
+    { title: 'Digital Consulting', description: 'Navigating the complex digital landscape.' },
+  ];
+
+  const values = [
+    { title: 'Industry Expertise', description: 'Deep understanding of tech and recruitment.' },
+    { title: 'Rapid Delivery', description: 'Speed without compromising quality.' },
+    { title: 'Global Network', description: 'Access to talent pools worldwide.' },
+    { title: 'Client Focus', description: 'Tailored solutions for your specific needs.' },
+  ];
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -79,276 +109,207 @@ const Home = () => {
         schema={schema}
       />
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50 overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-sky-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '4s' }}></div>
-        </div>
-        
-        <div className="container-custom relative z-10 py-20">
-          <div className="max-w-5xl mx-auto text-center space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-cyan-200 animate-fadeInDown">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></span>
-              <span className="text-sm font-medium text-gray-700">Connecting Talent with Opportunity Since 2009</span>
+      {/* 1. HERO SECTION */}
+      <section className="section-lg" style={{ 
+        paddingTop: '180px', 
+        paddingBottom: '120px', 
+        background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        <div className="container">
+          <div className="grid-12" style={{ alignItems: 'center' }}>
+            <div style={{ gridColumn: 'span 7', position: 'relative', zIndex: 2 }}>
+              <h1 className="animate-fadeInUp" style={{ marginBottom: '24px', fontSize: '64px', lineHeight: '1.1' }}>
+                Hire the Top 5% of <span style={{ color: 'var(--primary-green)' }}>Tech Talent</span>
+              </h1>
+              <p className="animate-fadeInUp" style={{ 
+                fontSize: '20px', 
+                color: '#555', 
+                marginBottom: '40px', 
+                maxWidth: '600px',
+                animationDelay: '0.2s'
+              }}>
+                We help businesses build world-class engineering teams. Specialized recruitment for DevOps, Cloud, and Digital Transformation.
+              </p>
+              <div className="animate-fadeInUp" style={{ display: 'flex', gap: '16px', animationDelay: '0.4s' }}>
+                <Link to="/contact" className="btn btn-primary">Start Hiring</Link>
+                <Link to="/jobs" className="btn btn-outline">Find Jobs</Link>
+              </div>
             </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-fadeInUp animate-delay-100">
-              Expert{' '}
-              <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient">
-                Recruitment
-              </span>
-              {' '}&{' '}
-              <span className="bg-gradient-to-r from-sky-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent animate-gradient">
-                Cloud Infrastructure
-              </span>
-              {' '}Solutions
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fadeInUp animate-delay-200">
-              Struggling to find the right talent or clients? We connect businesses with top professionals and help job seekers discover their perfect opportunities.
-            </p>
-
-            {/* Value Proposition Pills */}
-            <div className="flex flex-wrap justify-center gap-3 pt-2 animate-fadeInUp animate-delay-250">
-              <span className="px-4 py-2 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-300 rounded-full text-sm font-semibold text-gray-700">
-                🎯 Talent Acquisition
-              </span>
-              <span className="px-4 py-2 bg-gradient-to-r from-sky-500/10 to-purple-500/10 border border-sky-300 rounded-full text-sm font-semibold text-gray-700">
-                ☁️ Cloud Solutions
-              </span>
-              <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-300 rounded-full text-sm font-semibold text-gray-700">
-                🤝 Client Matching
-              </span>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 animate-fadeInUp animate-delay-300">
-              <Link to="/contact">
-                <Button size="lg" className="group relative overflow-hidden hover-lift">
-                  <span className="relative z-10">Find Talent or Jobs</span>
-                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Button>
-              </Link>
-              <Link to="/jobs">
-                <Button variant="secondary" size="lg" className="group">
-                  <span>Browse Opportunities</span>
-                  <svg className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </Button>
-              </Link>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8 pt-8 md:pt-12 max-w-4xl mx-auto">
-              {[
-                { value: '500+', label: 'Clients Served' },
-                { value: '98%', label: 'Satisfaction Rate' },
-                { value: '24/7', label: 'Support Available' },
-                { value: '15+', label: 'Years Experience' },
-              ].map((stat, i) => (
-                <div key={i} className={`bg-white/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-cyan-200 hover:shadow-xl transition-all hover:-translate-y-1 hover-glow animate-scaleIn animate-delay-${(i + 4) * 100}`}>
-                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">{stat.label}</div>
+            <div style={{ gridColumn: 'span 5', position: 'relative' }}>
+              <div className="animate-fadeInRight" style={{ 
+                position: 'relative',
+                zIndex: 1
+              }}>
+                <img 
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Team collaboration" 
+                  style={{ 
+                    borderRadius: '20px', 
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                    width: '100%'
+                  }} 
+                />
+                <div style={{
+                  position: 'absolute',
+                  bottom: '-30px',
+                  left: '-30px',
+                  background: 'var(--white)',
+                  padding: '24px',
+                  borderRadius: '12px',
+                  boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                  maxWidth: '200px'
+                }}>
+                  <div style={{ fontSize: '32px', fontWeight: 'bold', color: 'var(--primary-green)' }}>500+</div>
+                  <div style={{ fontSize: '14px', color: '#666' }}>Successful Placements</div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
         </div>
       </section>
 
-      {/* Services Overview - Premium Design */}
-      <section className="relative section-padding bg-black overflow-hidden">
-        {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
-
-        <div className="container-custom relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-bold mb-6 shadow-lg">
-              <span className="w-2 h-2 bg-white rounded-full animate-pulse mr-3 shadow-lg shadow-white/50"></span>
-              <span className="text-white">OUR SERVICES</span>
-            </div>
-            
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-              Comprehensive{' '}
-              <span className="relative inline-block">
-                <span className="text-white">
-                  IT Solutions
-                </span>
-                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-white rounded-full"></div>
-              </span>
-            </h2>
-            
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              End-to-end services tailored to accelerate your digital journey and drive business growth
-            </p>
-          </div>
-
-          {/* Services Grid with Enhanced Design */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {/* 2. SERVICES SECTION */}
+      <section className="section-lg">
+        <div className="container">
+          <div className="section-title animate-on-scroll">Our Expertise</div>
+          <div className="grid-12">
             {services.map((service, index) => (
-              <div
-                key={index}
-                className="group relative animate-fadeInUp"
-                style={{ animationDelay: `${index * 100}ms` }}
+              <div key={index} className="animate-on-scroll" style={{ 
+                gridColumn: 'span 3', 
+                background: 'var(--white)',
+                padding: '32px',
+                borderRadius: '12px',
+                border: '1px solid var(--neutral-mid)',
+                transition: 'all 0.3s ease',
+                animationDelay: `${index * 0.1}s`
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-10px)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
+                e.currentTarget.style.borderColor = 'var(--primary-green)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.borderColor = 'var(--neutral-mid)';
+              }}
               >
-                {/* Card Container */}
-                <div className="relative h-full bg-white/5 backdrop-blur-xl rounded-3xl p-8 border-2 border-white/20 hover:border-white/60 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-3 overflow-hidden">
-                  
-                  {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Animated Border Glow */}
-                  <div className="absolute inset-0 rounded-3xl bg-white opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500"></div>
-                  
-                  {/* Content */}
-                  <div className="relative z-10">
-                    {/* Image Container */}
-                    <div className="mb-8 transform group-hover:scale-105 transition-all duration-500">
-                      <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
-                        {/* Glow effect behind image */}
-                        <div className="absolute inset-0 bg-white rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 scale-110"></div>
-                        {/* Image */}
-                        <img 
-                          src={service.image} 
-                          alt={service.title}
-                          className="relative w-full h-full object-cover rounded-2xl border-2 border-white/30 group-hover:border-white/60 transition-all duration-500"
-                        />
-                        {/* Overlay gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                      </div>
-                    </div>
-                    
-                    {/* Title */}
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    
-                    {/* Description */}
-                    <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 transition-colors duration-300">
-                      {service.description}
-                    </p>
-                    
-                    {/* Learn More Link */}
-                    <div className="flex items-center text-white font-semibold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                      <span className="text-sm md:text-base">Learn More</span>
-                      <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
-                  </div>
-
-                  {/* Corner Accent */}
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-white/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-white/20 to-transparent rounded-tr-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div style={{ 
+                  height: '60px', 
+                  width: '60px', 
+                  background: 'var(--light-green)', 
+                  borderRadius: '50%', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  marginBottom: '24px',
+                  fontSize: '24px'
+                }}>
+                  {index === 0 ? '🚀' : index === 1 ? '👔' : index === 2 ? '⚡' : '🌟'}
                 </div>
+                <h3 style={{ fontSize: '20px', marginBottom: '16px', color: 'var(--primary-blue)' }}>{service.title}</h3>
+                <p style={{ color: '#666', fontSize: '15px', lineHeight: '1.6' }}>{service.description}</p>
               </div>
             ))}
-          </div>
-
-          {/* Bottom CTA */}
-          <div className="text-center mt-16">
-            <Link 
-              to="/employers" 
-              className="inline-flex items-center px-10 py-5 bg-white text-black text-lg font-bold rounded-2xl hover:shadow-2xl hover:shadow-white/50 hover:scale-110 transition-all duration-500 group overflow-hidden relative"
-            >
-              {/* Animated shine effect */}
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-black/20 to-transparent"></div>
-              
-              <span className="relative z-10">View All Services</span>
-              <svg className="relative z-10 w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section - Premium Dark Design */}
-      <section className="relative section-padding bg-black overflow-hidden">
-        {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
-
-        <div className="container-custom relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-bold mb-6 shadow-lg">
-              <span className="w-2 h-2 bg-white rounded-full animate-pulse mr-3 shadow-lg shadow-white/50"></span>
-              <span className="text-white">CLIENT TESTIMONIALS</span>
+      {/* 3. PROCESS SECTION */}
+      <section className="section-lg" style={{ background: 'var(--neutral-light)' }}>
+        <div className="container">
+          <div className="grid-12" style={{ alignItems: 'center' }}>
+            <div style={{ gridColumn: 'span 5' }}>
+              <h2 style={{ marginBottom: '24px' }}>Our Hiring Process</h2>
+              <p style={{ fontSize: '18px', color: '#666', marginBottom: '32px' }}>
+                We've refined our recruitment process to deliver speed without compromising on quality.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                {process.map((step, index) => (
+                  <div key={index} className="animate-on-scroll" style={{ 
+                    display: 'flex', 
+                    alignItems: 'flex-start', 
+                    gap: '20px',
+                    animationDelay: `${index * 0.1}s`
+                  }}>
+                    <div style={{ 
+                      fontSize: '24px', 
+                      fontWeight: 'bold', 
+                      color: 'var(--primary-green)',
+                      minWidth: '40px'
+                    }}>{step.step}</div>
+                    <div>
+                      <h4 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '8px' }}>{step.title}</h4>
+                      <p style={{ color: '#666', fontSize: '14px' }}>{step.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-              What Our{' '}
-              <span className="relative inline-block">
-                <span className="text-white">
-                  Clients Say
-                </span>
-                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-white rounded-full"></div>
-              </span>
-            </h2>
-            
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Trusted by industry leaders worldwide for exceptional results
-            </p>
+            <div style={{ gridColumn: 'span 7', position: 'relative' }}>
+               <div className="animate-fadeInLeft" style={{
+                 background: 'var(--white)',
+                 padding: '40px',
+                 borderRadius: '20px',
+                 boxShadow: '0 20px 60px rgba(0,0,0,0.05)'
+               }}>
+                 <img 
+                   src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                   alt="Process" 
+                   style={{ borderRadius: '12px', width: '100%' }}
+                 />
+               </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-20">
+      {/* 4. TESTIMONIALS */}
+      <section className="section-lg">
+        <div className="container">
+          <div className="section-title">Client Success Stories</div>
+          <div className="grid-12">
             {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="group relative animate-fadeInUp"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                {/* Card Container */}
-                <div className="relative h-full bg-white/5 backdrop-blur-xl rounded-3xl p-8 border-2 border-white/20 hover:border-white/60 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-3 overflow-hidden">
-                  
-                  {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Quote Icon */}
-                  <div className="relative mb-6">
-                    <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/30 group-hover:border-white/60 transition-all duration-500">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                      </svg>
-                    </div>
+              <div key={index} className="animate-on-scroll" style={{ 
+                gridColumn: 'span 4',
+                background: 'var(--white)',
+                padding: '40px',
+                border: '1px solid var(--neutral-mid)',
+                borderRadius: '12px',
+                position: 'relative'
+              }}>
+                <div style={{ 
+                  fontSize: '60px', 
+                  color: 'var(--light-green)', 
+                  position: 'absolute', 
+                  top: '20px', 
+                  left: '20px',
+                  fontFamily: 'serif',
+                  lineHeight: 1
+                }}>"</div>
+                <p style={{ 
+                  fontSize: '16px', 
+                  color: '#555', 
+                  fontStyle: 'italic', 
+                  marginBottom: '24px', 
+                  position: 'relative', 
+                  zIndex: 1 
+                }}>
+                  {testimonial.quote}
+                </p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  <div style={{ 
+                    width: '48px', 
+                    height: '48px', 
+                    background: '#ddd', 
+                    borderRadius: '50%' 
+                  }}></div>
+                  <div>
+                    <div style={{ fontWeight: 'bold', fontSize: '14px' }}>{testimonial.author}</div>
+                    <div style={{ fontSize: '12px', color: '#888' }}>{testimonial.position}</div>
                   </div>
-                  
-                  {/* Quote Text */}
-                  <p className="relative text-gray-300 text-lg leading-relaxed mb-8 italic">
-                    "{testimonial.quote}"
-                  </p>
-                  
-                  {/* Author Info */}
-                  <div className="relative flex items-center space-x-4 pt-6 border-t border-white/20">
-                    <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-white/30 flex-shrink-0">
-                      {testimonial.author.charAt(0)}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="font-bold text-white text-lg truncate">{testimonial.author}</div>
-                      <div className="text-sm text-gray-300 truncate">{testimonial.position}</div>
-                      <div className="text-sm font-semibold text-gray-400 mt-1">{testimonial.company}</div>
-                    </div>
-                  </div>
-
-                  {/* Corner Accent */}
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-white/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
             ))}
@@ -356,121 +317,20 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Our Clients Section - Black & White Grid */}
-      <section className="relative section-padding bg-white overflow-hidden">
-        {/* Subtle pattern background */}
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
-        
-        <div className="container-custom relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 bg-black/5 backdrop-blur-sm border border-black/10 rounded-full text-sm font-bold mb-6">
-              <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-              <span className="text-gray-900">OUR CLIENTS</span>
-            </div>
-            
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900 leading-tight">
-              Trusted by{' '}
-              <span className="relative inline-block">
-                <span className="text-black">Industry Leaders</span>
-                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-black rounded-full"></div>
-              </span>
-            </h2>
-            
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Partnering with innovative companies to build exceptional teams
-            </p>
-          </div>
-
-          {/* Clients Logo Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-16">
-            {[
-              { name: 'TechCorp', logo: 'TC' },
-              { name: 'GrowthTech', logo: 'GT' },
-              { name: 'FinancePlus', logo: 'F+' },
-              { name: 'CloudSystems', logo: 'CS' },
-              { name: 'DataDrive', logo: 'DD' },
-              { name: 'InnovateLabs', logo: 'IL' },
-              { name: 'NextGen', logo: 'NG' },
-              { name: 'SmartWorks', logo: 'SW' },
-              { name: 'TechSolutions', logo: 'TS' },
-              { name: 'FutureScale', logo: 'FS' },
-              { name: 'DevHub', logo: 'DH' },
-              { name: 'CodeFactory', logo: 'CF' },
-            ].map((client, index) => (
-              <div
-                key={index}
-                className="group relative animate-fadeInUp"
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                <div className="relative bg-white border-2 border-black/10 rounded-2xl p-8 hover:border-black/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 overflow-hidden aspect-square flex items-center justify-center">
-                  {/* Hover effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  {/* Logo */}
-                  <div className="relative text-center">
-                    <div className="text-4xl font-bold text-black mb-2 group-hover:scale-110 transition-transform duration-300">
-                      {client.logo}
-                    </div>
-                    <div className="text-xs text-gray-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {client.name}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Stats Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t-2 border-black/10">
-            {[
-              { value: '500+', label: 'Clients Worldwide' },
-              { value: '98%', label: 'Satisfaction Rate' },
-              { value: '10K+', label: 'Successful Placements' },
-              { value: '15+', label: 'Years of Excellence' },
-            ].map((stat, i) => (
-              <div key={i} className="text-center group">
-                <div className="text-5xl md:text-6xl font-bold text-black mb-3 group-hover:scale-110 transition-transform duration-300">
-                  {stat.value}
-                </div>
-                <div className="text-sm md:text-base text-gray-600 font-medium">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Strip */}
-      <section className="section-padding bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
-        </div>
-        
-        <div className="container-custom text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Struggling to Find the Right IT Solutions?
-          </h2>
-          <p className="text-2xl mb-10 text-cyan-50 max-w-3xl mx-auto">
-            We'll help you find the perfect solutions for your business needs — from recruitment to digital transformation
+      {/* 5. CTA SECTION */}
+      <section className="section-lg" style={{ background: 'var(--primary-blue)', color: 'var(--white)', textAlign: 'center' }}>
+        <div className="container">
+          <h2 style={{ color: 'var(--white)', marginBottom: '24px' }}>Ready to Build Your Dream Team?</h2>
+          <p style={{ fontSize: '20px', opacity: 0.9, marginBottom: '40px', maxWidth: '700px', margin: '0 auto 40px' }}>
+            Connect with us today and let's discuss how we can help you achieve your hiring goals.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button variant="secondary" size="lg" className="group bg-white text-cyan-600 hover:bg-cyan-50">
-                <span>Schedule a Consultation</span>
-                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </Button>
-            </Link>
-            <Link to="/jobs">
-              <Button size="lg" className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border-2 border-white text-white">
-                View Job Openings
-              </Button>
-            </Link>
-          </div>
+          <Link to="/contact" className="btn" style={{ 
+            backgroundColor: 'var(--white)', 
+            color: 'var(--primary-blue)',
+            padding: '16px 48px'
+          }}>
+            Get Started
+          </Link>
         </div>
       </section>
     </>

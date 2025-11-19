@@ -20,102 +20,47 @@ const About = () => {
       />
 
       {/* Hero */}
-      <section className="relative section-padding bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
-        <div className="container-custom max-w-4xl text-center relative z-10">
-          <h1 className="mb-6 animate-fadeInDown">
-            Excellence in <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient">IT Services</span>
+      <section className="section-lg" style={{ background: 'var(--neutral-light)', textAlign: 'center' }}>
+        <div className="container">
+          <h1 className="animate-fadeInDown" style={{ marginBottom: '24px' }}>
+            Excellence in <span style={{ color: 'var(--primary-green)' }}>IT Services</span>
           </h1>
-          <p className="text-xl md:text-2xl text-base-secondary leading-relaxed animate-fadeInUp animate-delay-200">
-            We're a team of IT experts providing exceptional DevOps services, IT consulting, mobile app development, and digital transformation solutions.
+          <p className="animate-fadeInUp" style={{ fontSize: '20px', color: '#666', maxWidth: '800px', margin: '0 auto' }}>
+            We're a team of IT experts providing exceptional DevOps services, IT Consulting, Mobile App Development, and Digital Transformation solutions.
           </p>
         </div>
       </section>
 
       {/* Story */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="max-w-6xl mx-auto">
-            {/* Section Header */}
-            <div className="text-center mb-16 animate-fadeInDown">
-              <span className="inline-block px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-semibold mb-4">
-                OUR JOURNEY
-              </span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Story</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-cyan-600 to-blue-600 mx-auto rounded-full"></div>
+      <section className="section-lg">
+        <div className="container">
+          <div className="section-title">Our Story</div>
+          <div className="grid-12" style={{ alignItems: 'center' }}>
+            <div style={{ gridColumn: 'span 6' }}>
+              <h3 style={{ marginBottom: '24px', color: 'var(--primary-blue)' }}>Transforming Technology, Together</h3>
+              <p style={{ marginBottom: '24px', color: '#666', fontSize: '16px' }}>
+                Founded with a vision to transform how businesses leverage technology, <strong>Lamstacks</strong> has become a trusted partner for organizations seeking exceptional IT services.
+              </p>
+              <p style={{ color: '#666', fontSize: '16px' }}>
+                We provide a wide range of services with a team of experts in the latest DevOps technologies and methodologies. We work closely with our clients to understand their specific needs and goals, delivering solutions that drive real business value.
+              </p>
             </div>
-
-            {/* Story Content */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Left Side - Main Story */}
-              <div className="space-y-6 animate-fadeInLeft">
-                <div className="relative">
-                  <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-cyan-500 to-blue-600 rounded-full"></div>
-                  <div className="pl-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Transforming Technology, Together</h3>
-                    <p className="text-lg text-gray-700 leading-relaxed">
-                      Founded with a vision to transform how businesses leverage technology, <span className="font-semibold text-gray-900">Lamstacks</span> has become a trusted partner for organizations seeking exceptional IT services.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300">
-                  <p className="text-gray-700 leading-relaxed">
-                    We provide a wide range of services with a team of experts in the latest DevOps technologies and methodologies. We work closely with our clients to understand their specific needs and goals, delivering solutions that drive real business value.
-                  </p>
-                </div>
-              </div>
-
-              {/* Right Side - Expertise & Commitment */}
-              <div className="space-y-6 animate-fadeInRight">
-                <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-cyan-400 transition-all duration-300 hover:shadow-xl">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-2">Our Expertise</h4>
-                      <p className="text-gray-700">
-                        DevOps Services, IT Consulting, Mobile Application Development, and Digital Transformation — helping companies modernize infrastructure and accelerate development cycles.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 border border-cyan-200">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md">
-                      <span className="text-2xl">🎯</span>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-2">Our Commitment</h4>
-                      <p className="text-gray-700 font-medium">
-                        At Lamstacks, we're committed to excellence in everything we do. <span className="text-cyan-700 font-semibold">Your success is our success.</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="text-center p-4 bg-white rounded-xl border border-gray-200 hover:shadow-md transition-all">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">50+</div>
-                    <div className="text-xs text-gray-600 font-medium mt-1">Projects</div>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded-xl border border-gray-200 hover:shadow-md transition-all">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">15+</div>
-                    <div className="text-xs text-gray-600 font-medium mt-1">Years</div>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded-xl border border-gray-200 hover:shadow-md transition-all">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">98%</div>
-                    <div className="text-xs text-gray-600 font-medium mt-1">Satisfied</div>
-                  </div>
-                </div>
+            <div style={{ gridColumn: 'span 6' }}>
+              <div style={{ 
+                background: 'var(--white)', 
+                padding: '40px', 
+                borderRadius: '12px', 
+                boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
+                border: '1px solid var(--neutral-mid)'
+              }}>
+                <h4 style={{ color: 'var(--primary-green)', marginBottom: '16px' }}>Our Expertise</h4>
+                <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {['DevOps Services', 'IT Consulting', 'Mobile App Development', 'Digital Transformation'].map(item => (
+                    <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#555' }}>
+                      <span style={{ color: 'var(--primary-green)' }}>✓</span> {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -123,33 +68,15 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          {/* Section Header */}
-          <div className="text-center mb-16 animate-fadeInDown">
-            <span className="inline-block px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-semibold mb-4 shadow-sm">
-              WHAT DRIVES US
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Core Values</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Principles that guide everything we do
-            </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-cyan-600 to-blue-600 mx-auto rounded-full mt-4"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {values.map((value, idx) => (
-              <div 
-                key={idx} 
-                className={`group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-cyan-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-fadeInUp animate-delay-${idx * 100}`}
-              >
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300 border border-cyan-200">
-                    {value.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-cyan-600 transition-colors">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+      <section className="section-lg" style={{ background: 'var(--primary-blue)', color: 'var(--white)' }}>
+        <div className="container">
+          <div className="section-title" style={{ color: 'var(--white)' }}>Our Values</div>
+          <div className="grid-12">
+            {values.map((value, index) => (
+              <div key={index} style={{ gridColumn: 'span 3', textAlign: 'center' }}>
+                <div style={{ fontSize: '40px', marginBottom: '16px' }}>{value.icon}</div>
+                <h4 style={{ fontSize: '18px', marginBottom: '12px', color: 'var(--white)' }}>{value.title}</h4>
+                <p style={{ fontSize: '14px', opacity: 0.8 }}>{value.description}</p>
               </div>
             ))}
           </div>
