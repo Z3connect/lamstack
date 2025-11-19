@@ -155,8 +155,8 @@ h3 {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--white);
-  border-bottom: 1px solid var(--neutral-mid);
+  background-color: #000; /* Navbar black */
+  border-bottom: 1px solid #111;
   height: 80px;
   display: flex;
   align-items: center;
@@ -175,7 +175,6 @@ h3 {
 .logo-img {
   height: 40px;
   width: auto;
-  filter: invert(1) brightness(0); /* Make white logo black */
 }
 
 .nav-desktop {
@@ -187,7 +186,7 @@ h3 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--neutral-dark);
+  color: var(--white);
   padding: 8px 16px;
 }
 
@@ -208,13 +207,13 @@ h3 {
   top: 80px;
   left: 0;
   width: 100%;
-  background-color: var(--white);
-  border-bottom: 1px solid var(--neutral-mid);
+  background-color: #000;
+  border-bottom: 1px solid #111;
   padding: 20px;
   display: none;
   flex-direction: column;
   gap: 16px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
 .mobile-menu.open {
@@ -230,11 +229,11 @@ h3 {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--white);
+  background-color: #000;
   min-width: 200px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
   z-index: 1;
-  border: 1px solid var(--neutral-mid);
+  border: 1px solid #111;
   border-radius: 4px;
   top: 100%;
   right: 0;
@@ -245,7 +244,7 @@ h3 {
 }
 
 .dropdown-link {
-  color: var(--neutral-dark);
+  color: var(--white);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -253,8 +252,24 @@ h3 {
 }
 
 .dropdown-link:hover {
-  background-color: var(--neutral-light);
+  background-color: var(--neutral-dark);
   color: var(--primary-green);
+}
+
+/* Custom Let's Talk button */
+.btn-talk {
+  background-color: var(--white);
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.btn-talk:hover {
+  background-color: var(--primary-green);
+  color: var(--white);
 }
 
 @media (max-width: 1024px) {

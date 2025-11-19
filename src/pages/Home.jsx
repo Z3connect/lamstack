@@ -120,19 +120,33 @@ const Home = () => {
         <div className="container">
           <div className="grid-12" style={{ alignItems: 'center' }}>
             <div style={{ gridColumn: 'span 7', position: 'relative', zIndex: 2 }}>
-              <h1 className="animate-fadeInUp" style={{ marginBottom: '24px', fontSize: '64px', lineHeight: '1.1' }}>
-                Hire the Top 5% of <span style={{ color: 'var(--primary-green)' }}>Tech Talent</span>
+              <h1 className="animate-fadeInUp" style={{ marginBottom: '24px', fontSize: '58px', lineHeight: '1.05' }}>
+                <span style={{ color: 'var(--primary-green)' }}>Expert Recruitment</span> &<br /> Cloud Infrastructure Solutions
               </h1>
               <p className="animate-fadeInUp" style={{ 
                 fontSize: '20px', 
-                color: '#555', 
-                marginBottom: '40px', 
-                maxWidth: '600px',
-                animationDelay: '0.2s'
+                color: '#444', 
+                marginBottom: '32px', 
+                maxWidth: '640px',
+                animationDelay: '0.15s'
               }}>
-                We help businesses build world-class engineering teams. Specialized recruitment for DevOps, Cloud, and Digital Transformation.
+                Struggling to find the right talent or clients? We connect businesses with top professionals and help job seekers discover their perfect opportunities.
               </p>
-              <div className="animate-fadeInUp" style={{ display: 'flex', gap: '16px', animationDelay: '0.4s' }}>
+              <div className="animate-fadeInUp" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginBottom: '40px', animationDelay: '0.3s' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', background: 'var(--white)', padding: '12px 18px', borderRadius: '50px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)', border: '1px solid var(--neutral-mid)' }}>
+                  <span style={{ fontSize: '22px' }}>🎯</span>
+                  <span style={{ fontSize: '14px', fontWeight: '600', letterSpacing: '0.5px' }}>Talent Acquisition</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', background: 'var(--white)', padding: '12px 18px', borderRadius: '50px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)', border: '1px solid var(--neutral-mid)' }}>
+                  <span style={{ fontSize: '22px' }}>☁️</span>
+                  <span style={{ fontSize: '14px', fontWeight: '600', letterSpacing: '0.5px' }}>Cloud Solutions</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', background: 'var(--white)', padding: '12px 18px', borderRadius: '50px', boxShadow: '0 4px 12px rgba(0,0,0,0.06)', border: '1px solid var(--neutral-mid)' }}>
+                  <span style={{ fontSize: '22px' }}>🤝</span>
+                  <span style={{ fontSize: '14px', fontWeight: '600', letterSpacing: '0.5px' }}>Client Matching</span>
+                </div>
+              </div>
+              <div className="animate-fadeInUp" style={{ display: 'flex', gap: '16px', animationDelay: '0.45s' }}>
                 <Link to="/contact" className="btn btn-primary">Start Hiring</Link>
                 <Link to="/jobs" className="btn btn-outline">Find Jobs</Link>
               </div>

@@ -101,7 +101,7 @@ const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <Link to="/contact" className="btn btn-primary" style={{ padding: '10px 24px', fontSize: '14px' }}>
+          <Link to="/contact" className="btn btn-talk" style={{ padding: '10px 24px', fontSize: '14px' }}>
             Let's Talk
           </Link>
         </nav>
@@ -151,7 +151,7 @@ const Header = () => {
           <Link
             to="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="btn btn-primary"
+            className="btn btn-talk"
             style={{ width: '100%', textAlign: 'center' }}
           >
             Let's Talk
