@@ -1,0 +1,158 @@
+[
+  {
+    "id": "senior-frontend-engineer",
+    "title": "Senior Frontend Engineer",
+    "company": "TechCorp Solutions",
+    "location": "Remote, India",
+    "salary": "₹15–20 LPA",
+    "type": "Full-time",
+    "department": "Engineering",
+    "remote": true,
+    "posted": "2025-11-01",
+    "description": "We are seeking a Senior Frontend Engineer to join our growing team. You'll work on building beautiful, performant user interfaces using React and modern web technologies.",
+    "requirements": [
+      "5+ years of experience with React and modern JavaScript",
+      "Strong understanding of responsive design and mobile-first development",
+      "Experience with state management (Redux, Context API)",
+      "Proficiency in CSS/Sass and modern styling solutions",
+      "Excellent problem-solving and communication skills"
+    ],
+    "benefits": [
+      "Competitive salary and equity",
+      "Flexible remote work",
+      "Health insurance",
+      "Learning & development budget",
+      "Collaborative team culture"
+    ]
+  },
+  {
+    "id": "product-manager",
+    "title": "Product Manager",
+    "company": "InnovateTech",
+    "location": "Bangalore, India",
+    "salary": "₹25–35 LPA",
+    "type": "Full-time",
+    "department": "Product",
+    "remote": false,
+    "posted": "2025-10-28",
+    "description": "Join us as a Product Manager to drive product strategy and execution. You'll work closely with engineering, design, and business teams to deliver world-class products.",
+    "requirements": [
+      "3+ years of product management experience",
+      "Strong analytical and data-driven decision making",
+      "Experience with agile methodologies",
+      "Excellent stakeholder management skills",
+      "Technical background preferred"
+    ],
+    "benefits": [
+      "Stock options",
+      "Performance bonuses",
+      "Comprehensive health coverage",
+      "Professional development",
+      "Modern office environment"
+    ]
+  },
+  {
+    "id": "devops-engineer",
+    "title": "DevOps Engineer",
+    "company": "CloudScale Inc",
+    "location": "Remote, Global",
+    "salary": "$80,000–$120,000",
+    "type": "Contract",
+    "department": "Infrastructure",
+    "remote": true,
+    "posted": "2025-11-05",
+    "description": "Looking for an experienced DevOps Engineer to build and maintain our cloud infrastructure. You'll work with cutting-edge technologies and help scale our platform.",
+    "requirements": [
+      "Strong experience with AWS/GCP/Azure",
+      "Proficiency in Docker and Kubernetes",
+      "Experience with CI/CD pipelines",
+      "Knowledge of Infrastructure as Code (Terraform, CloudFormation)",
+      "Strong scripting skills (Python, Bash)"
+    ],
+    "benefits": [
+      "Competitive hourly rate",
+      "Fully remote",
+      "Flexible hours",
+      "Exciting technical challenges",
+      "Global team collaboration"
+    ]
+  },
+  {
+    "id": "ux-designer",
+    "title": "UX/UI Designer",
+    "company": "DesignFirst",
+    "location": "Mumbai, India",
+    "salary": "₹12–18 LPA",
+    "type": "Full-time",
+    "department": "Design",
+    "remote": false,
+    "posted": "2025-11-08",
+    "description": "We're looking for a talented UX/UI Designer to create exceptional user experiences. You'll be responsible for the entire design process from research to final implementation.",
+    "requirements": [
+      "3+ years of UX/UI design experience",
+      "Proficiency in Figma, Sketch, or Adobe XD",
+      "Strong portfolio showcasing web and mobile designs",
+      "Understanding of user research methodologies",
+      "Excellent visual design skills"
+    ],
+    "benefits": [
+      "Creative work environment",
+      "Latest design tools and software",
+      "Regular design workshops",
+      "Health and wellness programs",
+      "Opportunity to mentor junior designers"
+    ]
+  },
+  {
+    "id": "data-scientist",
+    "title": "Data Scientist",
+    "company": "AI Ventures",
+    "location": "Remote, US/EU",
+    "salary": "$100,000–$150,000",
+    "type": "Full-time",
+    "department": "Data Science",
+    "remote": true,
+    "posted": "2025-10-25",
+    "description": "Join our data science team to build ML models and extract insights from large datasets. You'll work on challenging problems across various domains.",
+    "requirements": [
+      "MS/PhD in Computer Science, Statistics, or related field",
+      "3+ years of hands-on ML/AI experience",
+      "Proficiency in Python (NumPy, Pandas, Scikit-learn, TensorFlow)",
+      "Strong statistical analysis skills",
+      "Experience with big data technologies"
+    ],
+    "benefits": [
+      "Top-tier compensation",
+      "Equity package",
+      "Conference attendance",
+      "Research opportunities",
+      "Collaborative research environment"
+    ]
+  },
+  {
+    "id": "sales-executive",
+    "title": "Enterprise Sales Executive",
+    "company": "SalesPro Global",
+    "location": "Delhi, India",
+    "salary": "₹8–12 LPA + Commission",
+    "type": "Full-time",
+    "department": "Sales",
+    "remote": false,
+    "posted": "2025-11-10",
+    "description": "We're seeking an ambitious Enterprise Sales Executive to drive revenue growth. You'll manage the full sales cycle for enterprise clients.",
+    "requirements": [
+      "5+ years of B2B enterprise sales experience",
+      "Proven track record of meeting/exceeding quotas",
+      "Strong negotiation and closing skills",
+      "Experience with CRM tools (Salesforce, HubSpot)",
+      "Excellent presentation skills"
+    ],
+    "benefits": [
+      "Uncapped commission",
+      "Performance bonuses",
+      "Car allowance",
+      "Premium health insurance",
+      "International travel opportunities"
+    ]
+  }
+]

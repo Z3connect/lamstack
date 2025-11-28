@@ -1,0 +1,52 @@
+[
+  {
+    "category": "General",
+    "question": "What industries do you specialize in?",
+    "answer": "We specialize in Technology, Financial Services, Healthcare, E-commerce, and Professional Services. Our recruiters have deep domain expertise and extensive networks in these sectors."
+  },
+  {
+    "category": "General",
+    "question": "What is your typical time-to-hire?",
+    "answer": "Our average time-to-hire is 28-45 days depending on the role complexity and seniority. For urgent requirements, we offer expedited services with shortlists delivered within 72 hours."
+  },
+  {
+    "category": "Pricing",
+    "question": "What are your pricing models?",
+    "answer": "We offer three flexible models: 1) Contingent (15-20% of annual salary, pay on hire), 2) Retained (1/3 upfront, 1/3 shortlist, 1/3 on hire), and 3) RPO Subscription (monthly fee based on hiring volume). We customize based on your needs."
+  },
+  {
+    "category": "Pricing",
+    "question": "Do you offer any guarantees?",
+    "answer": "Yes! We provide a 60-day replacement guarantee. If a candidate leaves or is terminated within 60 days, we'll replace them at no additional fee. For retained searches, we guarantee shortlist delivery within agreed timelines."
+  },
+  {
+    "category": "Process",
+    "question": "How do you ensure candidate quality?",
+    "answer": "We use a multi-stage vetting process: initial screening call, skills assessment, cultural fit evaluation, reference checks, and background verification. Only the top 5% of candidates make it to your shortlist."
+  },
+  {
+    "category": "Process",
+    "question": "Can you help with remote/international hiring?",
+    "answer": "Absolutely! We have experience with remote hiring across 40+ countries. We handle timezone coordination, legal compliance checks, and can assist with visa/relocation if needed."
+  },
+  {
+    "category": "Technology",
+    "question": "Do you use AI in your recruitment process?",
+    "answer": "Yes, we leverage AI for resume screening, candidate matching, and interview scheduling. However, every candidate is personally reviewed by our expert recruiters to ensure quality and cultural fit."
+  },
+  {
+    "category": "Technology",
+    "question": "What ATS do you work with?",
+    "answer": "We integrate seamlessly with all major ATS platforms including Greenhouse, Lever, Workday, SAP SuccessFactors, and BambooHR. We can also work with your existing tools or provide our own system."
+  },
+  {
+    "category": "Support",
+    "question": "What happens after a candidate is hired?",
+    "answer": "We provide 30-day post-placement support including onboarding check-ins, performance feedback collection, and mediation if any issues arise. We're invested in long-term placement success."
+  },
+  {
+    "category": "Support",
+    "question": "How do you handle confidential searches?",
+    "answer": "We have strict confidentiality protocols including NDAs, anonymous job descriptions, discrete candidate outreach, and secure communication channels. We've successfully completed 100+ confidential C-suite searches."
+  }
+]

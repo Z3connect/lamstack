@@ -1,0 +1,107 @@
+[
+  {
+    "id": "techcorp-hiring-transformation",
+    "company": "TechCorp Solutions",
+    "logo": "/logos/techcorp.png",
+    "title": "Complete Hiring Transformation in 90 Days",
+    "industry": "Technology",
+    "challenge": "TechCorp was struggling with a 6-month average time-to-hire and 40% offer rejection rate. Their traditional recruitment process was costing them top talent to competitors.",
+    "approach": "We implemented a streamlined 3-stage process: AI-powered initial screening, technical assessment automation, and cultural fit interviews. We also created a compelling employer brand campaign highlighting their remote-first culture and learning opportunities.",
+    "results": [
+      {
+        "metric": "Time to Hire",
+        "before": "180 days",
+        "after": "45 days",
+        "improvement": "75% reduction"
+      },
+      {
+        "metric": "Offer Acceptance",
+        "before": "60%",
+        "after": "89%",
+        "improvement": "48% increase"
+      },
+      {
+        "metric": "Quality of Hire Score",
+        "before": "6.2/10",
+        "after": "8.9/10",
+        "improvement": "44% increase"
+      }
+    ],
+    "testimonial": {
+      "quote": "The recruitment transformation exceeded our expectations. We're now attracting and closing top-tier talent faster than ever.",
+      "author": "Sarah Johnson",
+      "position": "VP of Engineering, TechCorp"
+    },
+    "tags": ["Tech Hiring", "Process Optimization", "Employer Branding"]
+  },
+  {
+    "id": "financeplus-executive-search",
+    "company": "FinancePlus",
+    "logo": "/logos/financeplus.png",
+    "title": "C-Suite Executive Search Success",
+    "industry": "Financial Services",
+    "challenge": "FinancePlus needed to fill critical C-suite positions (CFO, CTO, CMO) within a tight 60-day window while maintaining strict confidentiality and cultural alignment.",
+    "approach": "We deployed our executive search team with deep financial services networks. Conducted discrete outreach to passive candidates, implemented rigorous assessment centers, and provided comprehensive onboarding support.",
+    "results": [
+      {
+        "metric": "Positions Filled",
+        "before": "0/3",
+        "after": "3/3",
+        "improvement": "100% success rate"
+      },
+      {
+        "metric": "Average Time to Close",
+        "before": "N/A",
+        "after": "52 days",
+        "improvement": "Beat deadline"
+      },
+      {
+        "metric": "6-Month Retention",
+        "before": "N/A",
+        "after": "100%",
+        "improvement": "Perfect retention"
+      }
+    ],
+    "testimonial": {
+      "quote": "Their executive search expertise and network helped us build a world-class leadership team in record time.",
+      "author": "Michael Chen",
+      "position": "CEO, FinancePlus"
+    },
+    "tags": ["Executive Search", "C-Suite", "Financial Services"]
+  },
+  {
+    "id": "startup-rapid-scaling",
+    "company": "GrowthTech Startup",
+    "logo": "/logos/growthtech.png",
+    "title": "Scaling from 10 to 100 Employees",
+    "industry": "SaaS Startup",
+    "challenge": "Post Series-B funding, GrowthTech needed to rapidly scale from 10 to 100 employees across engineering, sales, and operations while maintaining their startup culture.",
+    "approach": "We became their embedded RPO partner, setting up structured hiring processes, building talent pipelines, implementing ATS, and training their managers on interviewing best practices.",
+    "results": [
+      {
+        "metric": "Headcount Growth",
+        "before": "10 employees",
+        "after": "95 employees",
+        "improvement": "850% growth"
+      },
+      {
+        "metric": "Time per Hire",
+        "before": "N/A",
+        "after": "28 days avg",
+        "improvement": "Industry leading"
+      },
+      {
+        "metric": "Culture Fit Score",
+        "before": "N/A",
+        "after": "9.1/10",
+        "improvement": "Exceptional"
+      }
+    ],
+    "testimonial": {
+      "quote": "They didn't just fill roles – they helped us build scalable hiring infrastructure that will serve us for years to come.",
+      "author": "Priya Sharma",
+      "position": "Co-founder & COO, GrowthTech"
+    },
+    "tags": ["RPO", "Startup Scaling", "Tech Hiring"]
+  }
+]

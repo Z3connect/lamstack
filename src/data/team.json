@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "name": "Vignesh",
+    "position": "Founder & CEO",
+    "bio": "Visionary leader with expertise in DevOps technologies and methodologies. Committed to delivering exceptional IT services.",
+    "image": "/team/vignesh.jpg",
+    "linkedin": "https://linkedin.com/in/vignesh"
+  },
+  {
+    "id": "2",
+    "name": "Rajesh Kumar",
+    "position": "Head of DevOps",
+    "bio": "Expert in cloud infrastructure and automation. Specializes in CI/CD pipelines and container orchestration.",
+    "image": "/team/rajesh.jpg",
+    "linkedin": "https://linkedin.com/in/rajeshkumar"
+  },
+  {
+    "id": "3",
+    "name": "Priya Sharma",
+    "position": "Director of IT Consulting",
+    "bio": "Specialized in digital transformation and enterprise solutions. Helped 50+ companies modernize their IT infrastructure.",
+    "image": "/team/priya.jpg",
+    "linkedin": "https://linkedin.com/in/priyasharma"
+  },
+  {
+    "id": "4",
+    "name": "Arun Patel",
+    "position": "Lead Mobile Developer",
+    "bio": "10+ years in mobile app development. Expert in React Native, Flutter, and native iOS/Android development.",
+    "image": "/team/arun.jpg",
+    "linkedin": "https://linkedin.com/in/arunpatel"
+  }
+]
