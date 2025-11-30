@@ -3,6 +3,7 @@ import { useState } from 'react';
 import SEO from '../components/SEO';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import ServiceIcon from '../components/ServiceIcon';
 import faqData from '../data/faq.json';
 
 const Employers = () => {
@@ -13,31 +14,31 @@ const Employers = () => {
       title: 'Executive Search',
       description: 'Discrete, targeted recruitment for C-suite and senior leadership positions.',
       features: ['Confidential searches', 'Deep market mapping', 'Assessment centers', '60-day guarantee'],
-      icon: '🎯',
+      icon: 'target',
     },
     {
       title: 'Tech Hiring',
       description: 'Specialized recruitment for engineering, product, design, and data roles.',
       features: ['Technical assessments', '72-hour shortlists', 'Remote hiring expertise', 'Skill-based matching'],
-      icon: '💻',
+      icon: 'laptop',
     },
     {
       title: 'RPO Services',
       description: 'Become your embedded recruitment partner for scalable hiring needs.',
       features: ['Dedicated team', 'ATS integration', 'Process optimization', 'Metrics & reporting'],
-      icon: '⚡',
+      icon: 'lightning',
     },
     {
       title: 'Contract Staffing',
       description: 'Flexible talent solutions for project-based and temporary requirements.',
       features: ['Quick deployment', 'Vetted contractors', 'Compliance handling', 'Flexible terms'],
-      icon: '📊',
+      icon: 'chart',
     },
     {
       title: 'Employer Branding',
       description: 'Build a compelling employer brand that attracts talent organically.',
       features: ['Brand strategy', 'Content creation', 'Candidate experience', 'Analytics'],
-      icon: '✨',
+      icon: 'spark',
     },
   ];
 
@@ -107,15 +108,11 @@ const Employers = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative section-padding bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
-        <div className="container-custom relative z-10">
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="leading-tight">
-              Recruitment That Ships <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient">Offers, Not CV Piles</span>
+              Recruitment That Ships <span className="text-cyan-700">Offers, Not CV Piles</span>
             </h1>
             <p className="text-xl md:text-2xl text-base-secondary">
               Your hiring partner for tech, leadership, and project staffing.
@@ -142,18 +139,18 @@ const Employers = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {services.map((service, index) => (
               <Card key={index} className={`p-4 md:p-8 hover-lift hover-glow animate-fadeInUp animate-delay-${index * 100}`}>
-                <div className="text-3xl md:text-4xl mb-3 md:mb-4">{service.icon}</div>
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-base-bg flex items-center justify-center mb-3 md:mb-4">
+                  <ServiceIcon name={service.icon} className="w-6 h-6 md:w-7 md:h-7 text-primary-start" />
+                </div>
                 <h3 className="text-base md:text-2xl font-semibold mb-2 md:mb-3">{service.title}</h3>
                 <p className="text-base-secondary text-xs md:text-base mb-4 md:mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <svg className="w-4 h-4 md:w-5 md:h-5 text-primary-start mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
+                      <ServiceIcon name="check" className="w-4 h-4 md:w-5 md:h-5 text-primary-start mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-xs md:text-sm text-base-secondary">{feature}</span>
                     </li>
                   ))}
@@ -178,7 +175,7 @@ const Employers = () => {
             {processSteps.map((step, index) => (
               <div key={index} className="flex gap-6 mb-8 last:mb-0">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-gradient-primary text-white flex items-center justify-center font-bold">
+                  <div className="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold">
                     {index + 1}
                   </div>
                 </div>
@@ -264,14 +261,14 @@ const Employers = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 text-white">
+      <section className="section-padding bg-slate-900 text-white">
         <div className="container-custom text-center">
           <h2 className="text-white mb-4">Ready to Start Hiring?</h2>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Upload your job description and get a curated shortlist in 72 hours
+          <p className="text-xl mb-8 text-slate-200 max-w-2xl mx-auto">
+            Upload your job description and get a curated shortlist in 72 hours.
           </p>
-          <Link to="/contact">
-            <Button variant="secondary" size="lg">Post a Role</Button>
+          <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-semibold rounded-2xl hover:bg-slate-100 transition-colors">
+            Post a Role
           </Link>
         </div>
       </section>

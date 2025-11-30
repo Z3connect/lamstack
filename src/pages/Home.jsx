@@ -66,7 +66,7 @@ const Home = () => {
     { src: new URL('../assets/IMG-20251125-WA0032.jpg', import.meta.url).href, alt: 'Client 5' },
     { src: new URL('../assets/IMG-20251125-WA0033.jpg', import.meta.url).href, alt: 'Client 6' },
     { src: new URL('../assets/IMG-20251125-WA0034.jpg', import.meta.url).href, alt: 'Client 7' },
-    { src: new URL('../assets/IMG-20251125-WA0035.jpg', import.meta.url).href, alt: 'Client 8' },
+    // Removed WA0035 per request
     { src: new URL('../assets/IMG-20251126-WA0011.jpg', import.meta.url).href, alt: 'Client 9' },
   ];
 
@@ -169,7 +169,7 @@ const Home = () => {
                 { value: '15+', label: 'Years Experience' },
               ].map((stat, i) => (
                 <div key={i} className={`bg-white/50 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-cyan-200 hover:shadow-xl transition-all hover:-translate-y-1 hover-glow animate-scaleIn animate-delay-${(i + 4) * 100}`}>
-                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
+                  <div className="text-2xl md:text-3xl font-bold text-gray-900">
                     {stat.value}
                   </div>
                   <div className="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">{stat.label}</div>
@@ -187,186 +187,91 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Overview - Premium Design */}
-      <section className="relative section-padding bg-black overflow-hidden">
-        {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
-
-        <div className="container-custom relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-bold mb-6 shadow-lg">
-              <span className="w-2 h-2 bg-white rounded-full animate-pulse mr-3 shadow-lg shadow-white/50"></span>
-              <span className="text-white">OUR SERVICES</span>
+      {/* Services Overview */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-5 py-2 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 mb-6">
+              <span className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>
+              OUR SERVICES
             </div>
-            
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-              Comprehensive{' '}
-              <span className="relative inline-block">
-                <span className="text-white">
-                  IT Solutions
-                </span>
-                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-white rounded-full"></div>
-              </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+              Comprehensive IT Solutions
             </h2>
-            
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               End-to-end services tailored to accelerate your digital journey and drive business growth
             </p>
           </div>
 
-          {/* Services Grid with Enhanced Design */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative animate-fadeInUp"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group bg-white rounded-3xl p-6 lg:p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                {/* Card Container */}
-                <div className="relative h-full bg-white/5 backdrop-blur-xl rounded-3xl p-8 border-2 border-white/20 hover:border-white/60 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-3 overflow-hidden">
-                  
-                  {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Animated Border Glow */}
-                  <div className="absolute inset-0 rounded-3xl bg-white opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500"></div>
-                  
-                  {/* Content */}
-                  <div className="relative z-10">
-                    {/* Image Container */}
-                    <div className="mb-8 transform group-hover:scale-105 transition-all duration-500">
-                      <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
-                        {/* Glow effect behind image */}
-                        <div className="absolute inset-0 bg-white rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 scale-110"></div>
-                        {/* Image */}
-                        <img 
-                          src={service.image} 
-                          alt={service.title}
-                          className="relative w-full h-full object-cover rounded-2xl border-2 border-white/30 group-hover:border-white/60 transition-all duration-500"
-                        />
-                        {/* Overlay gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                      </div>
-                    </div>
-                    
-                    {/* Title */}
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    
-                    {/* Description */}
-                    <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 transition-colors duration-300">
-                      {service.description}
-                    </p>
-                    
-                    {/* Learn More Link */}
-                    <div className="flex items-center text-white font-semibold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                      <span className="text-sm md:text-base">Learn More</span>
-                      <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
-                  </div>
-
-                  {/* Corner Accent */}
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-white/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-white/20 to-transparent rounded-tr-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="mb-6 rounded-2xl overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-48 object-cover rounded-2xl"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                <div className="flex items-center text-sm font-semibold text-cyan-700">
+                  Learn More
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Bottom CTA */}
           <div className="text-center mt-16">
-            <Link 
-              to="/employers" 
-              className="inline-flex items-center px-10 py-5 bg-white text-black text-lg font-bold rounded-2xl hover:shadow-2xl hover:shadow-white/50 hover:scale-110 transition-all duration-500 group overflow-hidden relative"
+            <Link
+              to="/employers"
+              className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-gray-900 border border-gray-900 rounded-2xl hover:bg-gray-900 hover:text-white transition-colors"
             >
-              {/* Animated shine effect */}
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-black/20 to-transparent"></div>
-              
-              <span className="relative z-10">View All Services</span>
-              <svg className="relative z-10 w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              View All Services
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section - Premium Dark Design */}
-      <section className="relative section-padding bg-black overflow-hidden">
-        {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
-
-        <div className="container-custom relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-bold mb-6 shadow-lg">
-              <span className="w-2 h-2 bg-white rounded-full animate-pulse mr-3 shadow-lg shadow-white/50"></span>
-              <span className="text-white">CLIENT TESTIMONIALS</span>
+      {/* Testimonials Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-5 py-2 bg-gray-100 border border-gray-200 rounded-full text-sm font-semibold text-gray-700 mb-6">
+              <span className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>
+              CLIENT TESTIMONIALS
             </div>
-            
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-              What Our{' '}
-              <span className="relative inline-block">
-                <span className="text-white">
-                  Clients Say
-                </span>
-                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-white rounded-full"></div>
-              </span>
-            </h2>
-            
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">What Our Clients Say</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Trusted by industry leaders worldwide for exceptional results
             </p>
           </div>
 
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="group relative animate-fadeInUp"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                {/* Card Container */}
-                <div className="relative h-full bg-white/5 backdrop-blur-xl rounded-3xl p-8 border-2 border-white/20 hover:border-white/60 transition-all duration-500 hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-3 overflow-hidden">
-                  
-                  {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Quote Icon */}
-                  <div className="relative mb-6">
-                    <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/30 group-hover:border-white/60 transition-all duration-500">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                      </svg>
-                    </div>
-                  </div>
-                  
-                  {/* Quote Text */}
-                  <p className="relative text-gray-300 text-lg leading-relaxed mb-8 italic">
-                    "{testimonial.quote}"
-                  </p>
-                  
-                  {/* Author Info */}
-                  <div className="relative flex items-center space-x-4 pt-6 border-t border-white/20">
-                    <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-white/30 flex-shrink-0">
-                      {testimonial.author.charAt(0)}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="font-bold text-white text-lg truncate">{testimonial.author}</div>
-                      <div className="text-sm text-gray-300 truncate">{testimonial.position}</div>
-                      <div className="text-sm font-semibold text-gray-400 mt-1">{testimonial.company}</div>
-                    </div>
-                  </div>
-
-                  {/* Corner Accent */}
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-white/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card key={index} className="p-8 h-full border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                <div className="w-14 h-14 rounded-2xl bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6">
+                  <svg className="w-7 h-7 text-cyan-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
                 </div>
-              </div>
+                <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">"{testimonial.quote}"</p>
+                <div className="pt-4 border-t border-gray-100">
+                  <div className="font-bold text-gray-900">{testimonial.author}</div>
+                  <div className="text-sm text-gray-500">{testimonial.position}</div>
+                  <div className="text-sm font-semibold text-gray-600 mt-1">{testimonial.company}</div>
+                </div>
+              </Card>
             ))}
           </div>
         </div>
@@ -425,32 +330,29 @@ const Home = () => {
       </section>
 
       {/* CTA Strip */}
-      <section className="section-padding bg-[linear-gradient(135deg,_#8B5CF6_0%,_#22D3EE_100%)] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
-        </div>
-        
-        <div className="container-custom text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="section-padding bg-slate-900 text-white">
+        <div className="container-custom text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Struggling to Find the Right IT Solutions?
           </h2>
-          <p className="text-2xl mb-10 text-cyan-50 max-w-3xl mx-auto">
-            We'll help you find the perfect solutions for your business needs — from recruitment to digital transformation
+          <p className="text-xl md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto">
+            We'll help you connect with the right talent and technology partners for your business needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button variant="secondary" size="lg" className="group bg-white text-cyan-600 hover:bg-cyan-50">
-                <span>Schedule a Consultation</span>
-                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </Button>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-semibold rounded-2xl hover:bg-slate-100 transition-colors"
+            >
+              Schedule a Consultation
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
-            <Link to="/jobs">
-              <Button size="lg" className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border-2 border-white text-white">
-                View Job Openings
-              </Button>
+            <Link
+              to="/jobs"
+              className="inline-flex items-center justify-center px-8 py-4 border border-white/40 text-white font-semibold rounded-2xl hover:bg-white/10 transition-colors"
+            >
+              View Job Openings
             </Link>
           </div>
         </div>

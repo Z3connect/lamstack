@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Card from '../components/Card';
+import ServiceIcon from '../components/ServiceIcon';
 import jobsData from '../data/jobs.json';
 
 const Jobs = () => {
@@ -56,18 +57,14 @@ const Jobs = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative section-padding bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
-        <div className="container-custom relative z-10">
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <span className="inline-block px-4 py-2 bg-white/80 backdrop-blur-sm text-cyan-700 rounded-full text-sm font-semibold mb-2 shadow-lg border border-cyan-200">
+            <span className="inline-block px-4 py-2 bg-white text-cyan-700 rounded-full text-sm font-semibold mb-2 border border-cyan-200">
               CAREER OPPORTUNITIES
             </span>
             <h1 className="leading-tight">
-              Find Your <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient">Next Opportunity</span>
+              Find Your <span className="text-cyan-700">Next Opportunity</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600">
               Explore {jobsData.length} current openings from top companies
@@ -97,7 +94,7 @@ const Jobs = () => {
             </div>
 
             {/* Filters */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
               <select
                 value={filters.location}
                 onChange={(e) => setFilters({ ...filters, location: e.target.value })}
@@ -222,7 +219,9 @@ const Jobs = () => {
             </div>
           ) : (
             <div className="max-w-md mx-auto bg-white rounded-2xl p-12 text-center border-2 border-gray-200">
-              <div className="text-6xl mb-4">🔍</div>
+              <div className="w-16 h-16 rounded-2xl bg-cyan-50 border border-cyan-100 flex items-center justify-center mx-auto mb-4">
+                <ServiceIcon name="search" className="w-8 h-8 text-cyan-600" />
+              </div>
               <h3 className="text-2xl font-bold mb-2 text-gray-900">No jobs found</h3>
               <p className="text-gray-600">
                 Try adjusting your filters or search query
@@ -236,8 +235,8 @@ const Jobs = () => {
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto bg-white rounded-3xl p-12 border-2 border-gray-200 text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 bg-cyan-50 border border-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
               </svg>
             </div>
@@ -246,7 +245,7 @@ const Jobs = () => {
               Join our talent network and we'll notify you when matching opportunities become available
             </p>
             <Link to="/candidates#join-network">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold rounded-xl hover:shadow-xl transition-all hover:scale-105">
+              <button className="px-8 py-4 bg-gray-900 text-white font-bold rounded-xl hover:bg-gray-800 transition-colors">
                 Join Talent Network
               </button>
             </Link>

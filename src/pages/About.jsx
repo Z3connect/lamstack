@@ -1,13 +1,14 @@
 import SEO from '../components/SEO';
 import Card from '../components/Card';
+import ServiceIcon from '../components/ServiceIcon';
 import teamData from '../data/team.json';
 
 const About = () => {
   const values = [
-    { icon: '🎯', title: 'Quality Over Quantity', description: 'We shortlist only the top 5% of candidates' },
-    { icon: '⚡', title: 'Speed Matters', description: 'Fast turnaround without compromising quality' },
-    { icon: '🤝', title: 'True Partnership', description: 'We are invested in your long-term success' },
-    { icon: '💡', title: 'Innovation First', description: 'Leveraging technology to enhance human judgment' },
+    { icon: 'quality', title: 'Quality Over Quantity', description: 'We shortlist only the top 5% of candidates' },
+    { icon: 'speed', title: 'Speed Matters', description: 'Fast turnaround without compromising quality' },
+    { icon: 'partnership', title: 'True Partnership', description: 'We are invested in your long-term success' },
+    { icon: 'innovation', title: 'Innovation First', description: 'Leveraging technology to enhance human judgment' },
   ];
 
   return (
@@ -89,8 +90,8 @@ const About = () => {
 
                 <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 border border-cyan-200">
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md">
-                      <span className="text-2xl">🎯</span>
+                    <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md text-cyan-600">
+                      <ServiceIcon name="quality" className="w-6 h-6" />
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-gray-900 mb-2">Our Commitment</h4>
@@ -144,8 +145,8 @@ const About = () => {
                 className={`group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-cyan-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-fadeInUp animate-delay-${idx * 100}`}
               >
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300 border border-cyan-200">
-                    {value.icon}
+                        <div className="w-16 h-16 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-cyan-200 text-cyan-600">
+                          <ServiceIcon name={value.icon} className="w-7 h-7" />
                   </div>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-cyan-600 transition-colors">{value.title}</h3>
@@ -259,17 +260,23 @@ const About = () => {
           {/* Awards/Stats */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 text-center hover:shadow-lg transition-all">
-              <div className="text-5xl mb-4">🏆</div>
+                <div className="mx-auto mb-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 flex items-center justify-center text-cyan-600">
+                  <ServiceIcon name="quality" className="w-8 h-8" />
+                </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Industry Awards</h3>
               <p className="text-gray-600">Recognized for excellence in IT services</p>
             </div>
             <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 text-center hover:shadow-lg transition-all">
-              <div className="text-5xl mb-4">⭐</div>
+                <div className="mx-auto mb-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 flex items-center justify-center text-cyan-600">
+                  <ServiceIcon name="speed" className="w-8 h-8" />
+                </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">5-Star Rating</h3>
               <p className="text-gray-600">Consistently rated by our clients</p>
             </div>
             <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 text-center hover:shadow-lg transition-all">
-              <div className="text-5xl mb-4">🤝</div>
+                <div className="mx-auto mb-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 flex items-center justify-center text-cyan-600">
+                  <ServiceIcon name="partnership" className="w-8 h-8" />
+                </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Strategic Partners</h3>
               <p className="text-gray-600">Collaborating with industry leaders</p>
             </div>

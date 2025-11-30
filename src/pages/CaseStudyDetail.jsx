@@ -1,8 +1,8 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import SEO from '../components/SEO';
-import Button from '../components/Button';
 import Card from '../components/Card';
+import ServiceIcon from '../components/ServiceIcon';
 import caseStudiesData from '../data/casestudies.json';
 
 const CaseStudyDetail = () => {
@@ -29,7 +29,7 @@ const CaseStudyDetail = () => {
 
       <div className="min-h-screen bg-base-bg">
         {/* Hero */}
-        <section className="section-padding bg-gradient-primary text-white">
+        <section className="section-padding bg-slate-900 text-white">
           <div className="container-custom">
             <Link to="/case-studies" className="inline-flex items-center text-white/80 hover:text-white mb-6">
               <svg className="w-5 h-5 mr-2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -63,7 +63,9 @@ const CaseStudyDetail = () => {
             {/* Challenge - Approach - Results */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <Card className="p-8">
-                <div className="text-3xl mb-4">🎯</div>
+                <div className="w-12 h-12 rounded-2xl bg-base-bg flex items-center justify-center mb-4">
+                  <ServiceIcon name="target" className="w-6 h-6 text-primary-start" />
+                </div>
                 <h2 className="text-2xl font-semibold mb-4">Challenge</h2>
                 <p className="text-base-secondary leading-relaxed">
                   {caseStudy.challenge}
@@ -71,7 +73,9 @@ const CaseStudyDetail = () => {
               </Card>
 
               <Card className="p-8">
-                <div className="text-3xl mb-4">⚡</div>
+                <div className="w-12 h-12 rounded-2xl bg-base-bg flex items-center justify-center mb-4">
+                  <ServiceIcon name="lightning" className="w-6 h-6 text-primary-start" />
+                </div>
                 <h2 className="text-2xl font-semibold mb-4">Approach</h2>
                 <p className="text-base-secondary leading-relaxed">
                   {caseStudy.approach}
@@ -79,7 +83,9 @@ const CaseStudyDetail = () => {
               </Card>
 
               <Card className="p-8 bg-gradient-to-br from-purple-50 to-cyan-50 border-2 border-primary-start/20">
-                <div className="text-3xl mb-4">🚀</div>
+                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-4">
+                  <ServiceIcon name="rocket" className="w-6 h-6 text-primary-start" />
+                </div>
                 <h2 className="text-2xl font-semibold mb-4">Results</h2>
                 <p className="text-base-secondary leading-relaxed">
                   Achieved exceptional outcomes across all key metrics
@@ -126,14 +132,14 @@ const CaseStudyDetail = () => {
         </section>
 
         {/* CTA */}
-        <section className="section-padding bg-gradient-primary text-white">
+        <section className="section-padding bg-slate-900 text-white">
           <div className="container-custom text-center">
             <h2 className="text-white mb-4">Ready to Transform Your Hiring?</h2>
-            <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-              Let's discuss how we can deliver similar results for your organization
+            <p className="text-xl mb-8 text-slate-200 max-w-2xl mx-auto">
+              Let's discuss how we can deliver similar results for your organization.
             </p>
-            <Link to="/contact">
-              <Button variant="secondary" size="lg">Start a Conversation</Button>
+            <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-semibold rounded-2xl hover:bg-slate-100 transition-colors">
+              Start a Conversation
             </Link>
           </div>
         </section>

@@ -2,23 +2,24 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import ServiceIcon from '../components/ServiceIcon';
 
 const Candidates = () => {
   const benefits = [
     {
       title: 'Career Support',
       description: 'Personalized guidance throughout your job search journey',
-      icon: '🎯',
+      icon: 'target',
     },
     {
       title: 'Feedback Guarantee',
       description: 'Get constructive feedback after every interview',
-      icon: '💬',
+      icon: 'chat',
     },
     {
       title: 'Skill-based Matching',
       description: 'We match you to roles based on skills, not just keywords',
-      icon: '🔍',
+      icon: 'search',
     },
   ];
 
@@ -46,7 +47,7 @@ const Candidates = () => {
   ];
 
   const testimonials = [
-    {
+                  <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mb-3 md:mb-4 rounded-full bg-gray-900 text-white text-xl md:text-2xl font-bold hover:scale-110 transition-transform duration-300">
       quote: 'They helped me land my dream role in just 3 weeks. The support throughout was exceptional.',
       name: 'Amit Kumar',
       role: 'Software Engineer at Google',
@@ -73,15 +74,11 @@ const Candidates = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative section-padding bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
-        <div className="container-custom relative z-10">
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="leading-tight">
-              Land Roles You'll <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient">Actually Want to Keep</span>
+              Land Roles You'll <span className="text-cyan-700">Actually Want to Keep</span>
             </h1>
             <p className="text-xl md:text-2xl text-base-secondary">
               We connect you to companies that value talent and culture.
@@ -108,10 +105,12 @@ const Candidates = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {benefits.map((benefit, index) => (
               <Card key={index} className={`p-4 md:p-8 text-center hover-lift hover-glow animate-scaleIn animate-delay-${index * 100}`}>
-                <div className="text-3xl md:text-5xl mb-3 md:mb-4">{benefit.icon}</div>
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-base-bg flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <ServiceIcon name={benefit.icon} className="w-6 h-6 md:w-8 md:h-8 text-primary-start" />
+                </div>
                 <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-3">{benefit.title}</h3>
                 <p className="text-base-secondary text-xs md:text-base">{benefit.description}</p>
               </Card>
@@ -130,7 +129,7 @@ const Candidates = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
             {process.map((item, index) => (
               <div key={index} className={`text-center animate-fadeInUp animate-delay-${index * 100}`}>
                 <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mb-3 md:mb-4 rounded-full bg-gradient-primary text-white text-xl md:text-2xl font-bold hover:scale-110 transition-transform duration-300 animate-pulse">
@@ -262,14 +261,17 @@ const Candidates = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 text-white">
+      <section className="section-padding bg-slate-900 text-white">
         <div className="container-custom text-center">
           <h2 className="text-white mb-4">Ready to Accelerate Your Career?</h2>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Browse our current openings and find your next opportunity
+          <p className="text-xl mb-8 text-slate-200 max-w-2xl mx-auto">
+            Browse our current openings and find your next opportunity.
           </p>
-          <Link to="/jobs">
-            <Button variant="secondary" size="lg">View All Jobs</Button>
+          <Link
+            to="/jobs"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-semibold rounded-2xl hover:bg-slate-100 transition-colors"
+          >
+            View All Jobs
           </Link>
         </div>
       </section>
