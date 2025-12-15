@@ -6,6 +6,8 @@ import Jobs from './pages/Jobs';
 import JobDetail from './pages/JobDetail';
 import CaseStudies from './pages/CaseStudies';
 import CaseStudyDetail from './pages/CaseStudyDetail';
+import Blogs from './pages/Blogs';
+import BlogDetail from './pages/BlogDetail';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Careers from './pages/Careers';
@@ -13,6 +15,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import Terms from './pages/Terms';
 import Cookies from './pages/Cookies';
 import ThankYou from './pages/ThankYou';
+import Services from './pages/Services';
 import DevOps from './pages/services/DevOps';
 import ITConsulting from './pages/services/ITConsulting';
 import MobileDevelopment from './pages/services/MobileDevelopment';
@@ -28,9 +31,14 @@ function App() {
         <Route path="jobs/:id" element={<JobDetail />} />
         <Route path="case-studies" element={<CaseStudies />} />
         <Route path="case-studies/:id" element={<CaseStudyDetail />} />
+        <Route path="blog" element={<Blogs />} />
+        <Route path="blogs" element={<Blogs />} />
+        <Route path="blog/:slug" element={<BlogDetail />} />
+        <Route path="blogs/:slug" element={<BlogDetail />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="careers" element={<Careers />} />
+        <Route path="services" element={<Services />} />
         <Route path="services/devops" element={<DevOps />} />
         <Route path="services/consulting" element={<ITConsulting />} />
         <Route path="services/mobile" element={<MobileDevelopment />} />

@@ -1,20 +1,101 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import Button from '../components/Button';
 import Card from '../components/Card';
-import jobsData from '../data/jobs.json';
+import { getJobById } from '../backend/services/jobService';
+import { submitApplication } from '../backend/services/applicationService';
 
 const JobDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const job = jobsData.find(j => j.id === id);
+  const [job, setJob] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    if (!job) {
-      navigate('/jobs');
+    const fetchJob = async () => {
+      try {
+        setLoading(true);
+        const jobData = await getJobById(id);
+        if (!jobData) {
+          navigate('/jobs');
+          return;
+        }
+        setJob(jobData);
+      } catch (error) {
+        console.error('Error fetching job:', error);
+        navigate('/jobs');
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchJob();
+  }, [id, navigate]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError('');
+
+    const formData = new FormData(e.target);
+    const resumeFile = formData.get('resume');
+
+    // Convert resume file to base64
+    let resumeData = null;
+    if (resumeFile && resumeFile.size > 0) {
+      // Check file size (limit to 1MB for Firestore)
+      if (resumeFile.size > 1024 * 1024) {
+        setError('Resume file size must be less than 1MB. Please compress your PDF.');
+        setSubmitting(false);
+        return;
+      }
+      
+      resumeData = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve({
+          data: reader.result,
+          name: resumeFile.name,
+          type: resumeFile.type
+        });
+        reader.onerror = reject;
+        reader.readAsDataURL(resumeFile);
+      });
     }
-  }, [job, navigate]);
+
+    const applicationData = {
+      jobId: job.id,
+      jobTitle: job.title,
+      company: job.company,
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      linkedin: formData.get('linkedin'),
+      coverLetter: formData.get('coverLetter'),
+      resume: resumeData, // Store resume as base64
+    };
+
+    try {
+      await submitApplication(applicationData);
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting application:', error);
+      setError('Failed to submit application. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-600"></div>
+      </div>
+    );
+  }
 
   if (!job) {
     return null;
@@ -169,10 +250,27 @@ const JobDetail = () => {
 
                 {/* Application Form */}
                 <Card id="application-form" className="p-8">
-                  <h2 className="text-2xl font-semibold mb-6">Submit Your Application</h2>
-                  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" className="space-y-6">
-                    <input type="hidden" name="job_id" value={job.id} />
-                    <input type="hidden" name="job_title" value={job.title} />
+                  {submitted ? (
+                    <div className="text-center py-8">
+                      <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <h2 className="text-2xl font-semibold mb-2 text-green-600">Application Submitted!</h2>
+                      <p className="text-base-secondary">Thank you for applying. We'll review your application and get back to you soon.</p>
+                    </div>
+                  ) : (
+                    <>
+                      <h2 className="text-2xl font-semibold mb-6">Submit Your Application</h2>
+                      {error && (
+                        <div className="mb-4 p-4 bg-red-50 border border-red-200 text-red-600 rounded-xl">
+                          {error}
+                        </div>
+                      )}
+                      <form onSubmit={handleSubmit} className="space-y-6">
+                        <input type="hidden" name="job_id" value={job.id} />
+                        <input type="hidden" name="job_title" value={job.title} />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
@@ -266,10 +364,12 @@ const JobDetail = () => {
                       ></textarea>
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full">
-                      Submit Application
+                    <Button type="submit" size="lg" className="w-full" disabled={submitting}>
+                      {submitting ? 'Submitting...' : 'Submit Application'}
                     </Button>
                   </form>
+                    </>
+                  )}
                 </Card>
               </div>
 

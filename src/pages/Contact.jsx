@@ -1,8 +1,40 @@
+import { useState } from 'react';
 import SEO from '../components/SEO';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import { submitContact } from '../backend/services/contactService';
 
 const Contact = () => {
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError('');
+
+    const formData = new FormData(e.target);
+    const contactData = {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      company: formData.get('company'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+    };
+
+    try {
+      await submitContact(contactData);
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting contact:', error);
+      setError('Failed to send message. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <>
       <SEO
@@ -94,7 +126,24 @@ const Contact = () => {
 
             {/* Contact Form */}
             <Card className="p-4 md:p-8 animate-fadeInRight hover-lift">
-              <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" className="space-y-4 md:space-y-6">
+              {submitted ? (
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-2 text-green-600">Message Sent!</h3>
+                  <p className="text-base-secondary">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                </div>
+              ) : (
+                <>
+                  {error && (
+                    <div className="mb-4 p-4 bg-red-50 border border-red-200 text-red-600 rounded-xl">
+                      {error}
+                    </div>
+                  )}
+                  <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium mb-2">
@@ -191,10 +240,12 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full">
-                  Send Message
+                <Button type="submit" size="lg" className="w-full" disabled={submitting}>
+                  {submitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
+                </>
+              )}
             </Card>
           </div>
         </div>

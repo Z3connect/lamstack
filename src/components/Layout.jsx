@@ -4,12 +4,10 @@ import Footer from './Footer';
 
 const Layout = () => {
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
-  
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
-      <main className={`flex-grow ${isHomePage ? '' : 'pt-4'}`}>
+      <main className={`flex-grow pt-12 md:pt-16`}>
         <Outlet />
       </main>
       <Footer />

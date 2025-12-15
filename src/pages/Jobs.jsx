@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Card from '../components/Card';
 import ServiceIcon from '../components/ServiceIcon';
-import jobsData from '../data/jobs.json';
+import { getActiveJobs } from '../backend/services/jobService';
 
 const Jobs = () => {
+  const [jobs, setJobs] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState({
     location: 'all',
     type: 'all',
@@ -15,13 +17,29 @@ const Jobs = () => {
 
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Fetch jobs from Firebase
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        setLoading(true);
+        const jobsData = await getActiveJobs();
+        setJobs(jobsData);
+      } catch (error) {
+        console.error('Error fetching jobs:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchJobs();
+  }, []);
+
   // Extract unique values for filters
-  const locations = ['all', ...new Set(jobsData.map(job => job.location))];
-  const types = ['all', ...new Set(jobsData.map(job => job.type))];
-  const departments = ['all', ...new Set(jobsData.map(job => job.department))];
+  const locations = ['all', ...new Set(jobs.map(job => job.location))];
+  const types = ['all', ...new Set(jobs.map(job => job.type))];
+  const departments = ['all', ...new Set(jobs.map(job => job.department))];
 
   // Filter jobs
-  const filteredJobs = jobsData.filter(job => {
+  const filteredJobs = jobs.filter(job => {
     const matchesSearch = job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          job.company.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesLocation = filters.location === 'all' || job.location === filters.location;
@@ -34,8 +52,11 @@ const Jobs = () => {
     return matchesSearch && matchesLocation && matchesType && matchesDepartment && matchesRemote;
   });
 
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
+  const formatDate = (dateValue) => {
+    if (!dateValue) return 'Recently';
+    
+    // Handle Firebase Timestamp
+    const date = dateValue.toDate ? dateValue.toDate() : new Date(dateValue);
     const now = new Date();
     const diffTime = Math.abs(now - date);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
@@ -47,6 +68,14 @@ const Jobs = () => {
     return `${Math.floor(diffDays / 30)} months ago`;
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-600"></div>
+      </div>
+    );
+  }
+
   return (
     <>
       <SEO
@@ -57,17 +86,17 @@ const Jobs = () => {
       />
 
       {/* Hero Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <span className="inline-block px-4 py-2 bg-white text-cyan-700 rounded-full text-sm font-semibold mb-2 border border-cyan-200">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <span className="inline-block px-4 py-2 bg-white text-cyan-700 rounded-full text-sm font-semibold border border-cyan-200">
               CAREER OPPORTUNITIES
             </span>
-            <h1 className="leading-tight">
+            <h1 className="leading-tight mt-6">
               Find Your <span className="text-cyan-700">Next Opportunity</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600">
-              Explore {jobsData.length} current openings from top companies
+              Explore {jobs.length} current openings from top companies
             </p>
           </div>
         </div>
