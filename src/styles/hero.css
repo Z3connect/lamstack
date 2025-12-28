@@ -1,0 +1,408 @@
+/* ============================================
+   HERO.CSS
+   Purpose: Hero section container, hero content,
+   hero badge, trusted logos, and sidebar cards panel
+   ============================================ */
+
+/* ====== Hero Badge ====== */
+
+.div-section-header-badge {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 32px;
+    border-style: solid;
+    border-color: #4d2f8c;
+    border-width: 1px;
+    padding: 5px 13.75px 7px 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    box-shadow: inset 0px -7px 11px 0px rgba(164, 143, 255, 0.12);
+    overflow: hidden;
+}
+
+/* ====== Trusted Logos Section ====== */
+
+.logos {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    width: 650px;
+    position: relative;
+    overflow: hidden;
+}
+
+.logos-slide {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-right: 40px;
+    animation: slide 20s infinite linear;
+    flex-shrink: 0;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.image-2 {
+    flex-shrink: 0;
+    width: 102.58px;
+    height: 33.32px;
+    position: relative;
+    object-fit: cover;
+    aspect-ratio: 102.58/33.32;
+}
+
+._66-c-7381-df-15273314-f-4-eec-77-4 {
+    flex-shrink: 0;
+    width: 103.09px;
+    height: 26.33px;
+    position: relative;
+    object-fit: cover;
+    aspect-ratio: 103.09/26.33;
+}
+
+._66-c-7381-dd-6-c-17-f-4-bded-50-e-01-2 {
+    flex-shrink: 0;
+    width: 22.68px;
+    height: 22.68px;
+    position: relative;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+._6739968198-fc-4326-f-58-e-3396-njeda-logo-300-x-112-1 {
+    flex-shrink: 0;
+    width: 72.29px;
+    height: 27.01px;
+    position: relative;
+    object-fit: cover;
+    aspect-ratio: 72.29/27.01;
+}
+
+._673998018783-fc-08-be-985518-screenshot-2024-11-17-at-12-44-52-pm {
+    flex-shrink: 0;
+    width: 99.49px;
+    height: 27.32px;
+    position: relative;
+    object-fit: cover;
+    aspect-ratio: 99.49/27.32;
+}
+
+._66-c-7381-e-3920-a-03-f-524-eed-86-3 {
+    flex-shrink: 0;
+    width: 61.86px;
+    height: 26.47px;
+    position: relative;
+    object-fit: cover;
+    aspect-ratio: 61.86/26.47;
+}
+
+/* ====== Hero Sidebar Cards Panel ====== */
+
+.frame-2147224490 {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 32px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.35);
+    border-width: 1px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-2147224489 {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* ====== Hero Sidebar Service Cards ====== */
+
+.frame-2147224449 {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px 32px 12px 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 20.96px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 433.36px;
+    position: relative;
+}
+
+.frame-2147224454 {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px 32px 12px 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 20.96px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 433.36px;
+    position: relative;
+}
+
+.frame-21472244562 {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px 32px 12px 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 20.96px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 433.36px;
+    position: relative;
+}
+
+.frame-2147224455 {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px 32px 12px 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 20.96px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 433.36px;
+    position: relative;
+}
+
+.frame-2147224450 {
+    display: flex;
+    flex-direction: column;
+    gap: 11.98px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 245.49px;
+    position: relative;
+}
+
+.frame-2147224451 {
+    display: flex;
+    flex-direction: column;
+    gap: 11.98px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 245.49px;
+    position: relative;
+}
+
+/* ====== Video Section ====== */
+
+.frame-2147224480 {
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.79) 57.85355567932129%,
+            rgba(0, 0, 0, 0) 100%);
+    border-radius: 24px;
+    padding: 18px 51px 18px 51px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 1190px;
+    height: 319px;
+    position: absolute;
+    left: 122px;
+    top: 867px;
+}
+
+.frame-1984079626 {
+    background: #ffffff;
+    border-radius: 174.38px;
+    display: flex;
+    flex-direction: row;
+    gap: 3.88px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 93px;
+    position: absolute;
+    left: 865px;
+    top: 92px;
+}
+
+.play-1 {
+    border-radius: 174.38px;
+    flex-shrink: 0;
+    width: 93px;
+    height: 93px;
+    position: relative;
+    overflow: visible;
+}
+
+/* ====== Stats Section ====== */
+
+.frame-1000002048 {
+    background: rgba(34, 175, 106, 0.05);
+    padding: 80px 100px 80px 100px;
+    width: 1440px;
+    height: 574px;
+    position: absolute;
+    left: 0px;
+    top: 3554px;
+}
+
+.hero-image {
+    opacity: 0.1;
+    height: auto;
+    position: absolute;
+    left: 412.02px;
+    top: 40px;
+    overflow: visible;
+}
+
+.frame-1000002047 {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+    top: 50%;
+}
+
+/* ====== Stats Grid (Missing Styles) ====== */
+.frame-1000002046 {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.div,
+.div2,
+.div3,
+.div4 {
+    padding: 16px 90px 16px 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 228px;
+    position: relative;
+}
+
+.div2 {
+    width: 238px;
+}
+
+.div3 {
+    width: 251px;
+}
+
+.div4 {
+    width: 225px;
+}
+
+._500,
+._15 {
+    background: var(--blue-moon, linear-gradient(135deg, rgba(58, 66, 225, 1) 0%, rgba(98, 12, 144, 1) 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 46px;
+    line-height: 56px;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clients-worldwide,
+.satisfaction-rate,
+.successful-placements,
+.years-of-excellence {
+    color: var(--body-text-body-color, #212529);
+    text-align: center;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-18,
+.line-17,
+.line-19 {
+    margin-top: -1px;
+    border-style: solid;
+    border-color: var(--theme-secondary, #6c757d);
+    border-width: 1px 0 0 0;
+    opacity: 0.3;
+    flex-shrink: 0;
+    width: 66px;
+    height: 0px;
+    position: relative;
+    transform-origin: 0 0;
+    transform: rotate(90deg) scale(1, 1);
+}
+
+.built-in-india-trusted-worldwide-we-re-here-24-7-support-span {
+    color: #000000;
+}
+
+.built-in-india-trusted-worldwide-we-re-here-24-7-support-span2 {
+    background: var(--cold-breeze, linear-gradient(225.92deg, rgba(51, 210, 255, 1) 0%, rgba(61, 104, 222, 1) 53.74739170074463%, rgba(152, 69, 232, 1) 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.the-core-values-and-principles-that-drive-us-to-deliver-excellence-across-continents {
+    color: #4b5563;
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 24px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}

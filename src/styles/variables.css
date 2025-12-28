@@ -1,0 +1,112 @@
+/* ============================================
+   VARIABLES.CSS
+   Purpose: CSS custom properties, color palette,
+   typography variables, and design tokens
+   ============================================ */
+
+:root {
+    /* ====== Color Palette ====== */
+
+    /* Primary Colors */
+    --primary-primary-700: #1d4fd7;
+    --primary-blue: #1f27ff;
+    --primary-purple: #5e19f0;
+    --primary-purple-dark: #3719f0;
+    --primary-magenta: #b819f0;
+
+    /* Background Colors */
+    --backgrounds-primary: #ffffff;
+    --bg-light: #f8f9fb;
+    --bg-green-light: #f2fff7;
+    --bg-dark: #000000;
+
+    /* Gray Scale */
+    --gray-gray-600: #5b6b86;
+    --gray-gray-700: #384252;
+    --grays-black: #000000;
+    --white: #ffffff;
+    --white-white: #ffffff;
+
+    /* Text Colors */
+    --body-text-body-color: #212529;
+    --text-dark: #1e1e1e;
+    --text-secondary: #4b5563;
+    --text-muted: #555555;
+
+    /* Accent Colors */
+    --accents-green: #34c759;
+    --accent-purple: #544ad1;
+
+    /* Theme Colors */
+    --theme-secondary: #6c757d;
+
+    /* ====== Gradients ====== */
+
+    --ne: linear-gradient(90deg,
+            rgba(13, 175, 105, 1) 40.86538553237915%,
+            rgba(197, 5, 255, 1) 75.96153616905212%);
+
+    --cold-breeze: linear-gradient(225.92deg,
+            rgba(51, 210, 255, 1) 0%,
+            rgba(61, 104, 222, 1) 53.74739170074463%,
+            rgba(152, 69, 232, 1) 100%);
+
+    --blue-moon: linear-gradient(135deg,
+            rgba(58, 66, 225, 1) 0%,
+            rgba(98, 12, 144, 1) 100%);
+
+    --dark-alpine: linear-gradient(46.42deg,
+            rgba(15, 95, 75, 1) 0%,
+            rgba(9, 21, 47, 1) 100%);
+
+    /* ====== Typography ====== */
+
+    /* Font Families */
+    --font-inter: "Inter", sans-serif;
+    --font-rubik: "Rubik", sans-serif;
+    --font-source-sans: "SourceSansPro", sans-serif;
+
+    /* Body Medium */
+    --body-medium-medium-font-family: "Inter-Medium", sans-serif;
+    --body-medium-medium-font-size: 16px;
+    --body-medium-medium-line-height: 24px;
+    --body-medium-medium-font-weight: 500;
+
+    /* Text MD Medium */
+    --text-md-medium-font-family: "Inter-Medium", sans-serif;
+    --text-md-medium-font-size: 16px;
+    --text-md-medium-line-height: 24px;
+    --text-md-medium-font-weight: 500;
+
+    /* Text MD Semibold */
+    --text-md-semibold-font-family: "Inter-SemiBold", sans-serif;
+    --text-md-semibold-font-size: 16px;
+    --text-md-semibold-line-height: 24px;
+    --text-md-semibold-font-weight: 600;
+
+    /* ====== Shadows ====== */
+
+    --shadow-xs-box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+
+    /* ====== Spacing ====== */
+
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+    --spacing-4xl: 80px;
+
+    /* ====== Border Radius ====== */
+
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-2xl: 24px;
+    --radius-full: 900px;
+}
+
+/* Figma Color Variables */

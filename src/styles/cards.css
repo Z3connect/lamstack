@@ -1,0 +1,344 @@
+/* ============================================
+   CARDS.CSS
+   Purpose: Service cards, card content frames,
+   card icons, and card layout styles
+   ============================================ */
+
+/* ====== Service Card Icon Images ====== */
+
+.staff-recruitment {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.staff-recruitment3 {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.dev-ops {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    overflow: visible;
+}
+
+.dev-ops3 {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    overflow: visible;
+}
+
+.cloud-migration {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.cloud-migration3 {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.ai-services {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    overflow: visible;
+}
+
+.ai-services3 {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    overflow: visible;
+}
+
+/* ====== Chevron Icons ====== */
+
+.chevron-right {
+    flex-shrink: 0;
+    width: 17.96px;
+    height: 17.96px;
+    position: relative;
+    overflow: visible;
+}
+
+.chevron-right2 {
+    flex-shrink: 0;
+    width: 17.96px;
+    height: 17.96px;
+    position: relative;
+    overflow: visible;
+}
+
+.chevron-right3 {
+    flex-shrink: 0;
+    width: 17.96px;
+    height: 17.96px;
+    position: relative;
+    overflow: visible;
+}
+
+.chevron-right4 {
+    flex-shrink: 0;
+    width: 17.96px;
+    height: 17.96px;
+    position: relative;
+    overflow: visible;
+}
+
+/* ====== Hero Sidebar Card Text ====== */
+
+.staff-recruitment2 {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 17.962499618530273px;
+    line-height: 107.7%;
+    font-weight: 600;
+    position: relative;
+    align-self: stretch;
+}
+
+.pre-vetted-tech-professionals-matched-to-your-business-needs {
+    color: rgba(0, 0, 0, 0.8);
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 11.975000381469727px;
+    line-height: 17.96px;
+    font-weight: 400;
+    position: relative;
+    width: 245px;
+}
+
+.dev-ops2 {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 17.962499618530273px;
+    line-height: 107.7%;
+    font-weight: 600;
+    position: relative;
+    align-self: stretch;
+}
+
+.automated-ci-cd-pipelines-for-faster-reliable-software-delivery {
+    color: rgba(0, 0, 0, 0.8);
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 11.975000381469727px;
+    line-height: 17.96px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+.cloud-migration2 {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 17.962499618530273px;
+    line-height: 107.7%;
+    font-weight: 600;
+    position: relative;
+    align-self: stretch;
+}
+
+.securely-move-applications-and-data-to-scalable-cloud-platforms {
+    color: rgba(0, 0, 0, 0.8);
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 11.975000381469727px;
+    line-height: 17.96px;
+    font-weight: 400;
+    position: relative;
+    width: 238px;
+}
+
+.ai-services2 {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 17.962499618530273px;
+    line-height: 107.7%;
+    font-weight: 600;
+    position: relative;
+    align-self: stretch;
+}
+
+.smart-ai-solutions-to-automate-analyze-and-optimize-operations {
+    color: rgba(0, 0, 0, 0.8);
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 11.975000381469727px;
+    line-height: 17.96px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+/* ====== Main Service Cards ====== */
+
+.frame-2147224471 {
+    background: #ffffff;
+    border-radius: 24px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-2147224472 {
+    background: #ffffff;
+    border-radius: 24px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-2147224470 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* ====== Main Service Card Titles ====== */
+
+.staff-recruitment4 {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 28px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    position: relative;
+    align-self: stretch;
+}
+
+.dev-ops4 {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 28px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    position: relative;
+    align-self: stretch;
+}
+
+.cloud-migration4 {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 28px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    position: relative;
+    align-self: stretch;
+}
+
+.ai-services4 {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 28px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    position: relative;
+    align-self: stretch;
+}
+
+/* ====== Main Service Card Descriptions ====== */
+
+.specialized-recruitment-solutions-for-engineering-product-and-technical-roles-we-provide-access-to-pre-vetted-professionals-who-align-with-your-company-culture-technology-stack-and-long-term-business-goals {
+    color: #4b5563;
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 20px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    position: relative;
+    width: 463px;
+}
+
+.optimize-your-development-lifecycle-with-modern-dev-ops-practices-from-ci-cd-automation-to-infrastructure-management-we-help-teams-deliver-faster-more-reliable-and-scalable-software-solutions {
+    color: #4b5563;
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 20px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    position: relative;
+    width: 463px;
+}
+
+.seamlessly-transition-your-applications-and-data-to-the-cloud-with-minimal-disruption-our-cloud-migration-services-ensure-security-performance-and-scalability-while-reducing-operational-complexity {
+    color: #4b5563;
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 20px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    position: relative;
+    width: 463px;
+}
+
+.leverage-artificial-intelligence-to-transform-your-business-operations-we-design-and-implement-ai-driven-solutions-that-enhance-decision-making-automate-workflows-and-unlock-valuable-insights-from-data {
+    color: #4b5563;
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 20px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    position: relative;
+    width: 463px;
+}

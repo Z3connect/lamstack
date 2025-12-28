@@ -1,0 +1,914 @@
+/* ============================================
+   RESPONSIVE.CSS
+   Purpose: All responsive media queries
+   Desktop-first approach
+   
+   Breakpoints:
+   - 1440px+: Desktop (base styles)
+   - 1024px - 1439px: Laptop
+   - 768px - 1024px: Tablet
+   - 481px - 768px: Mobile Large
+   - 360px - 480px: Mobile
+   ============================================ */
+
+/* ============================================
+   LAPTOP BREAKPOINT (1024px - 1439px)
+   Slight adjustments for smaller desktops
+   ============================================ */
+
+@media (max-width: 1439px) {
+
+    /* Main Container */
+    .home-screen {
+        overflow-x: hidden;
+    }
+
+    /* Hero Background */
+    ._25 {
+        width: 100%;
+    }
+
+    /* Section Backgrounds */
+    .rectangle-34624351,
+    .rectangle-34624350,
+    .rectangle-34624522 {
+        width: 100%;
+    }
+
+    /* Header */
+    .container2 {
+        width: 100%;
+        max-width: 1280px;
+    }
+
+    /* Stats Section */
+    .frame-1000002048 {
+        width: 100%;
+        padding: 60px 60px;
+    }
+
+    /* Footer */
+    .footer-17 {
+        width: 100%;
+    }
+
+    .group2 {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   TABLET BREAKPOINT (768px - 1024px)
+   Major layout changes for tablet view
+   ============================================ */
+
+@media (max-width: 1024px) {
+
+    /* Hero Section - Stack vertically */
+    .frame-2147224456 {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 20px;
+        top: calc(50% - 400px);
+    }
+
+    .content {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+    }
+
+    .frame-2147224457 {
+        width: 100%;
+        position: relative;
+    }
+
+    /* Hero Text */
+    .transform-your-business-with-expert-tech-solutions {
+        font-size: 36px;
+    }
+
+    .from-finding-world-class-talent-to-building-scalable-cloud-infrastructure-we-re-your-end-to-end-technology-partner-for-growth-and-innovation {
+        width: 100%;
+    }
+
+    /* Logos Section */
+    .logos {
+        width: 100%;
+        max-width: 600px;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    /* Hero Sidebar Cards Panel */
+    .frame-2147224490 {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .frame-2147224449,
+    .frame-2147224454,
+    .frame-21472244562,
+    .frame-2147224455 {
+        width: 100%;
+        max-width: 433px;
+    }
+
+    /* Services Section */
+    .frame-2147224479 {
+        width: 100%;
+        padding: 0 20px;
+        left: 0;
+    }
+
+    .frame-2147224477 {
+        width: 100%;
+    }
+
+    .comprehensive-tech-solutions-for-modern-businesses {
+        width: 100%;
+        font-size: 32px;
+    }
+
+    .we-deliver-end-to-end-technology-services-designed-to-help-businesses-scale-efficiently-innovate-faster-and-stay-competitive-in-a-rapidly-evolving-digital-landscape {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    /* Service Cards - Stack on tablet */
+    .frame-2147224473,
+    .frame-2147224474 {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .frame-2147224471,
+    .frame-2147224472 {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .specialized-recruitment-solutions-for-engineering-product-and-technical-roles-we-provide-access-to-pre-vetted-professionals-who-align-with-your-company-culture-technology-stack-and-long-term-business-goals,
+    .optimize-your-development-lifecycle-with-modern-dev-ops-practices-from-ci-cd-automation-to-infrastructure-management-we-help-teams-deliver-faster-more-reliable-and-scalable-software-solutions,
+    .seamlessly-transition-your-applications-and-data-to-the-cloud-with-minimal-disruption-our-cloud-migration-services-ensure-security-performance-and-scalability-while-reducing-operational-complexity,
+    .leverage-artificial-intelligence-to-transform-your-business-operations-we-design-and-implement-ai-driven-solutions-that-enhance-decision-making-automate-workflows-and-unlock-valuable-insights-from-data {
+        width: 100%;
+    }
+
+    /* Video Section */
+    .frame-2147224480 {
+        width: calc(100% - 40px);
+        left: 20px;
+        padding: 20px 30px;
+    }
+
+    .frame-2147224465 {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Testimonials Section */
+    .frame-21472244802 {
+        width: 100%;
+        left: 20px;
+        padding-right: 40px;
+    }
+
+    .testimonal-set {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .testimonal {
+        flex-direction: column;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .testimonial,
+    .testimonial2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .slider {
+        width: 100%;
+        gap: 40px;
+    }
+
+    .frame-21472244772 {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /* Stats Section */
+    .frame-1000002048 {
+        padding: 40px 20px;
+        height: auto;
+    }
+
+    .frame-21472244773 {
+        width: 100%;
+    }
+
+    .built-in-india-trusted-worldwide-we-re-here-24-7-support {
+        width: 100%;
+        font-size: 32px;
+    }
+
+    .frame-1000002046 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .div,
+    .div2,
+    .div3,
+    .div4 {
+        width: auto;
+        padding: 16px 40px;
+    }
+
+    /* Hide vertical dividers on tablet */
+    .line-17,
+    .line-18,
+    .line-19 {
+        display: none;
+    }
+
+    /* Footer */
+    .frame-160 {
+        width: calc(100% - 40px);
+    }
+
+    .frame-2147224487 {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .frame-2147224482 {
+        width: 100%;
+    }
+
+    .struggling-to-find-the-right-it-solutions,
+    .we-ll-help-you-connect-with-the-right-talent-and-technology-partners-for-your-business-needs {
+        width: 100%;
+    }
+
+    .frame-215 {
+        width: calc(100% - 40px);
+        left: 20px;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    /* Navigation */
+    .header {
+        border-radius: 16px;
+        padding: 12px;
+        width: calc(100% - 40px);
+        top: 56px;
+    }
+
+    .container2 {
+        padding: 0 16px;
+    }
+
+    .content2 {
+        gap: 40px;
+    }
+
+    .navigation {
+        display: none;
+    }
+}
+
+/* ============================================
+   MOBILE LARGE BREAKPOINT (481px - 768px)
+   Mobile-optimized layouts
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    /* Main wrapper - convert to flow layout */
+    .home-screen {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    /* Decorative elements - HIDE completely on mobile */
+    /* Decorative elements - HIDE completely on mobile */
+    /* .ellipse-1473, .ellipse-1474 kept for background */
+    .ellipse-1475,
+    .ellipse-1476,
+    .ellipse-1477,
+    .vector-172,
+    .group-47251,
+    .grid-layers-v-1,
+    .hero-image,
+    .group-37380 {
+        display: none !important;
+    }
+
+    .mask-group {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.6;
+        z-index: 0;
+    }
+
+    /* Mobile Background Gradients */
+    .ellipse-1473 {
+        width: 280px;
+        height: 280px;
+        left: -40px;
+        top: 100px;
+        opacity: 0.5;
+        filter: blur(90px);
+    }
+
+    .ellipse-1474 {
+        width: 240px;
+        height: 240px;
+        left: auto;
+        right: -60px;
+        top: 250px;
+        opacity: 0.5;
+        filter: blur(80px);
+    }
+
+    /* Header - fixed at top but proper z-index */
+    .header {
+        position: fixed;
+        top: 56px;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+    }
+
+    /* Announcement bar - flow layout */
+    .rectangle-34624350 {
+        position: relative;
+        width: 100%;
+    }
+
+    .big-news-a-better-hr-experience-is-on-the-way-with-our-upcoming-hrma-launch {
+        position: relative;
+        top: auto;
+        left: auto;
+        translate: none;
+        text-align: center;
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    /* Hero background - convert to flow */
+    ._25 {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 140px 16px 60px;
+        /* Increased top padding to clear header */
+        overflow: hidden;
+        /* Ensure image stays inside */
+    }
+
+    /* Hero section - proper flow */
+    .frame-2147224456 {
+        position: relative;
+        top: auto;
+        translate: none;
+        left: auto;
+        padding: 40px 0 20px;
+        margin: 0 auto;
+        width: 100%;
+        z-index: 2;
+        /* Content on top of image */
+    }
+
+    .content {
+        width: 100%;
+        height: auto;
+    }
+
+    .frame-2147224457 {
+        position: relative;
+        width: 100%;
+        gap: 40px;
+    }
+
+    .transform-your-business-with-expert-tech-solutions {
+        font-size: 28px;
+    }
+
+    .from-finding-world-class-talent-to-building-scalable-cloud-infrastructure-we-re-your-end-to-end-technology-partner-for-growth-and-innovation {
+        font-size: 18px;
+    }
+
+    /* Buttons - Stack on mobile */
+    .frame-2147224461 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button,
+    .button2 {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Logos */
+    .container {
+        margin-top: 48px;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .logos {
+        padding: 24px;
+        gap: 0;
+        /* Gap handled by slide logic, strict nowrap */
+        background: #ffffff;
+        border-radius: 16px;
+        display: flex;
+        flex-wrap: nowrap;
+        /* FORCE ONE ROW */
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .logos img {
+        max-width: 80px;
+        height: auto;
+    }
+
+    /* Hero Sidebar Cards Panel */
+    .frame-2147224490 {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    /* Inner wrapper vertical stack */
+    .frame-2147224489 {
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+        padding: 0;
+    }
+
+    .frame-2147224449,
+    .frame-2147224454,
+    .frame-21472244562,
+    .frame-2147224455 {
+        width: 100%;
+        flex-shrink: 0;
+        padding: 12px 16px;
+    }
+
+    .frame-2147224450,
+    .frame-2147224451 {
+        width: 100%;
+    }
+
+    /* Section backgrounds - convert to flow */
+    .rectangle-34624351,
+    .rectangle-34624522 {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Video Section - convert from absolute */
+    .frame-2147224480 {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 20px 0;
+        border-radius: 12px;
+    }
+
+    /* Services section - convert from absolute */
+    .frame-2147224479 {
+        position: relative;
+        top: auto;
+        left: auto;
+        translate: none;
+        width: 100%;
+        padding: 40px 16px;
+    }
+
+    .frame-2147224478 {
+        width: auto;
+    }
+
+    .frame-2147224471,
+    .frame-2147224472 {
+        padding: 24px;
+    }
+
+    .staff-recruitment4,
+    .dev-ops4,
+    .cloud-migration4,
+    .ai-services4 {
+        font-size: 22px;
+    }
+
+    .specialized-recruitment-solutions-for-engineering-product-and-technical-roles-we-provide-access-to-pre-vetted-professionals-who-align-with-your-company-culture-technology-stack-and-long-term-business-goals,
+    .optimize-your-development-lifecycle-with-modern-dev-ops-practices-from-ci-cd-automation-to-infrastructure-management-we-help-teams-deliver-faster-more-reliable-and-scalable-software-solutions,
+    .seamlessly-transition-your-applications-and-data-to-the-cloud-with-minimal-disruption-our-cloud-migration-services-ensure-security-performance-and-scalability-while-reducing-operational-complexity,
+    .leverage-artificial-intelligence-to-transform-your-business-operations-we-design-and-implement-ai-driven-solutions-that-enhance-decision-making-automate-workflows-and-unlock-valuable-insights-from-data {
+        font-size: 16px;
+    }
+
+    /* Video Section */
+    .frame-2147224480 {
+        height: auto;
+        min-height: 200px;
+    }
+
+    .frame-2147224467 {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .frame-1984079626 {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 20px auto 0;
+    }
+
+    /* Testimonials */
+    .frame-21472244802 {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 40px 16px;
+        height: auto;
+    }
+
+    .frame-21472244772 {
+        position: relative;
+        top: auto;
+        translate: none;
+        left: auto;
+        height: auto;
+    }
+
+    .what-our-clients-say {
+        font-size: 28px;
+    }
+
+    .real-experiences-from-companies-that-have-transformed-their-teams-and-technology-with-lam-stacks {
+        font-size: 16px;
+    }
+
+    .frame-1 {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        aspect-ratio: 294/320;
+    }
+
+    .image {
+        width: 100%;
+        left: 0;
+    }
+
+    /* Stats */
+    .frame-1000002048 {
+        position: relative;
+        top: auto;
+        left: auto;
+        height: auto;
+    }
+
+    .frame-1000002047 {
+        position: relative;
+        top: auto;
+        left: auto;
+        translate: none;
+        padding: 0 16px;
+    }
+
+    .frame-1000002046 {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .div,
+    .div2,
+    .div3,
+    .div4 {
+        width: 100%;
+        padding: 16px;
+    }
+
+    ._500,
+    ._15 {
+        font-size: 36px;
+    }
+
+    /* Footer */
+    .footer-17 {
+        position: relative;
+        top: auto;
+        left: auto;
+        height: auto;
+        padding: 40px 16px;
+    }
+
+    .frame-160 {
+        position: relative;
+        top: auto;
+        translate: none;
+        left: auto;
+        width: 100%;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .frame-2147224487 {
+        position: relative;
+        top: auto;
+        translate: none;
+        left: auto;
+    }
+
+    .struggling-to-find-the-right-it-solutions {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .we-ll-help-you-connect-with-the-right-talent-and-technology-partners-for-your-business-needs {
+        font-size: 16px;
+    }
+
+    .frame-21472244612 {
+        width: 100%;
+    }
+
+    .button6 {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .frame-164 {
+        display: none;
+    }
+
+    /* Footer Container */
+    .frame-215 {
+        position: relative;
+        top: auto;
+        left: auto;
+        translate: none;
+        width: 100%;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 40px 16px 20px;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 24px !important;
+        background-color: #0b0f19;
+        /* Dark background matching theme */
+        color: #ffffff;
+    }
+
+    /* Copyright Text Container */
+    .frame-192 {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 0;
+    }
+
+    /* Links Container */
+    .frame-1922 {
+        width: 100% !important;
+        justify-content: center !important;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    ._2025-lamstacks-all-rights-reserved {
+        font-size: 12px;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+
+    .group2 {
+        display: none !important;
+    }
+}
+
+/* ============================================
+   MOBILE SMALL BREAKPOINT (360px - 480px)
+   Smallest mobile devices
+   ============================================ */
+
+@media (max-width: 480px) {
+
+    /* Typography scaling */
+    .transform-your-business-with-expert-tech-solutions {
+        font-size: 24px;
+    }
+
+    .from-finding-world-class-talent-to-building-scalable-cloud-infrastructure-we-re-your-end-to-end-technology-partner-for-growth-and-innovation {
+        font-size: 16px;
+    }
+
+    .comprehensive-tech-solutions-for-modern-businesses {
+        font-size: 24px;
+    }
+
+    .we-deliver-end-to-end-technology-services-designed-to-help-businesses-scale-efficiently-innovate-faster-and-stay-competitive-in-a-rapidly-evolving-digital-landscape {
+        font-size: 14px;
+    }
+
+    .built-in-india-trusted-worldwide-we-re-here-24-7-support {
+        font-size: 24px;
+    }
+
+    .the-core-values-and-principles-that-drive-us-to-deliver-excellence-across-continents {
+        font-size: 14px;
+    }
+
+    /* Announcement bar */
+    .rectangle-34624350 {
+        height: auto;
+        min-height: 48px;
+        padding: 8px 16px;
+    }
+
+    .big-news-a-better-hr-experience-is-on-the-way-with-our-upcoming-hrma-launch {
+        font-size: 12px;
+        position: relative;
+        top: auto;
+        translate: none;
+        left: auto;
+        text-align: center;
+        padding: 8px;
+    }
+
+    /* Header */
+    .header {
+        top: 50px;
+        width: calc(100% - 24px);
+    }
+
+    .group-2 {
+        width: 120px;
+        height: auto;
+    }
+
+    /* Navbar Button Mobile Fix */
+    .button-base2 {
+        padding: 8px 12px;
+    }
+
+    .text4 {
+        font-size: 14px;
+    }
+
+    /* Hero Cards Panel */
+    .frame-2147224490 {
+        padding: 12px;
+    }
+
+    .staff-recruitment2,
+    .dev-ops2,
+    .cloud-migration2,
+    .ai-services2 {
+        font-size: 14px;
+    }
+
+    .pre-vetted-tech-professionals-matched-to-your-business-needs,
+    .automated-ci-cd-pipelines-for-faster-reliable-software-delivery,
+    .securely-move-applications-and-data-to-scalable-cloud-platforms,
+    .smart-ai-solutions-to-automate-analyze-and-optimize-operations {
+        font-size: 11px;
+        width: 100%;
+    }
+
+    /* Service Cards */
+    .staff-recruitment4,
+    .dev-ops4,
+    .cloud-migration4,
+    .ai-services4 {
+        font-size: 20px;
+    }
+
+    .specialized-recruitment-solutions-for-engineering-product-and-technical-roles-we-provide-access-to-pre-vetted-professionals-who-align-with-your-company-culture-technology-stack-and-long-term-business-goals,
+    .optimize-your-development-lifecycle-with-modern-dev-ops-practices-from-ci-cd-automation-to-infrastructure-management-we-help-teams-deliver-faster-more-reliable-and-scalable-software-solutions,
+    .seamlessly-transition-your-applications-and-data-to-the-cloud-with-minimal-disruption-our-cloud-migration-services-ensure-security-performance-and-scalability-while-reducing-operational-complexity,
+    .leverage-artificial-intelligence-to-transform-your-business-operations-we-design-and-implement-ai-driven-solutions-that-enhance-decision-making-automate-workflows-and-unlock-valuable-insights-from-data {
+        font-size: 14px;
+    }
+
+    /* Video Section */
+    .empowering-businesses-through-technology {
+        font-size: 22px;
+    }
+
+    .discover-how-we-ve-helped-hundreds-of-companies-transform-their-operations-scale-their-teams-and-accelerate-growth-through-innovative-tech-solutions {
+        font-size: 14px;
+    }
+
+    /* Testimonials */
+    .what-our-clients-say {
+        font-size: 24px;
+    }
+
+    .partnering-with-organization-was-one-of-the-best-decisions-we-ve-made-for-our-business-their-website-template-is-sleek-easy-to-customize-and-optimizes-performance-on-all-devices-our-customers-have-been-praising-the-new-design-and-we-ve-noticed-improved-engagement-metrics-across-the-board,
+    .our-online-store-s-sales-have-skyrocketed-after-working-with-company-the-template-they-provided-was-modern-user-friendly-and-fully-responsive-we-couldn-t-be-happier-with-the-results-their-support-throughout-the-process-was-exceptional {
+        font-size: 14px;
+    }
+
+    /* Stats */
+    ._500,
+    ._15 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .clients-worldwide,
+    .satisfaction-rate,
+    .successful-placements,
+    .years-of-excellence {
+        font-size: 12px;
+    }
+
+    /* Footer */
+    .struggling-to-find-the-right-it-solutions {
+        font-size: 20px;
+    }
+
+    .we-ll-help-you-connect-with-the-right-talent-and-technology-partners-for-your-business-needs {
+        font-size: 14px;
+    }
+
+    ._2025-lamstacks-all-rights-reserved {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .term-of-service,
+    .policy-service,
+    .cookie-policy,
+    .faq {
+        font-size: 12px;
+    }
+
+    /* Slider */
+    .slider {
+        gap: 20px;
+    }
+
+    .previous,
+    .next {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    .home-screen {
+        height: auto;
+        background: white;
+    }
+
+    ._25,
+    .ellipse-1473,
+    .ellipse-1474,
+    .ellipse-1475,
+    .ellipse-1476,
+    .ellipse-1477,
+    .vector-172,
+    .group-47251,
+    .mask-group,
+    .grid-layers-v-1 {
+        display: none;
+    }
+}

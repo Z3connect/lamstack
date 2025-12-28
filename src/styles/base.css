@@ -1,0 +1,318 @@
+/* ============================================
+   BASE.CSS
+   Purpose: Global resets, box-sizing, body styles,
+   and foundational element defaults
+   ============================================ */
+
+/* ====== Global Reset ====== */
+
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    background: none;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+}
+
+menu,
+ol,
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ====== Main Container ====== */
+
+.home-screen,
+.home-screen * {
+    box-sizing: border-box;
+}
+
+.home-screen {
+    background: #f8f9fb;
+    height: 5087px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ====== Hero Background Section ====== */
+
+._25 {
+    background: #000000;
+    width: 100%;
+    height: 1001px;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+}
+
+/* ====== Decorative Ellipses ====== */
+
+.ellipse-1473 {
+    background: #5e19f0;
+    border-radius: 50%;
+    opacity: 0.6;
+    width: 1157px;
+    height: 772px;
+    position: absolute;
+    left: 32px;
+    top: 315px;
+    filter: blur(206px);
+}
+
+.ellipse-1474 {
+    background: #3719f0;
+    border-radius: 50%;
+    opacity: 0.6;
+    width: 772px;
+    height: 772px;
+    position: absolute;
+    left: -223px;
+    top: 465px;
+    filter: blur(206px);
+}
+
+.ellipse-1475 {
+    background: #b819f0;
+    border-radius: 50%;
+    opacity: 0.7;
+    width: 329px;
+    height: 329px;
+    position: absolute;
+    left: 1224px;
+    top: 672px;
+    filter: blur(106px);
+}
+
+.ellipse-1477 {
+    background: #000000;
+    border-radius: 50%;
+    opacity: 0.3;
+    width: 737px;
+    height: 329px;
+    position: absolute;
+    left: 293px;
+    top: 676px;
+    filter: blur(106px);
+}
+
+.ellipse-1476 {
+    background: #28009b;
+    border-radius: 50%;
+    opacity: 0.6;
+    width: 329px;
+    height: 97.43px;
+    position: absolute;
+    left: 850px;
+    top: 864.9px;
+    transform-origin: 0 0;
+    transform: rotate(-41.244deg) scale(1, 1);
+    filter: blur(106px);
+}
+
+.ellipse-1478 {
+    background: var(--accents-green, #34c759);
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    aspect-ratio: 1;
+}
+
+/* ====== Decorative SVG Elements ====== */
+
+.vector-172 {
+    opacity: 0.7;
+    width: 1986px;
+    height: 936px;
+    position: absolute;
+    left: 0px;
+    top: 1274px;
+    overflow: visible;
+}
+
+.group-47251 {
+    width: 1124.15px;
+    height: 1040.69px;
+    position: absolute;
+    left: 704px;
+    top: 1513.68px;
+    overflow: visible;
+}
+
+.mask-group {
+    opacity: 0.6;
+    width: 834.68px;
+    height: 1477.9px;
+    position: absolute;
+    left: -493.14px;
+    top: 1394.9px;
+    overflow: visible;
+}
+
+.grid-layers-v-1 {
+    height: auto;
+    position: absolute;
+    left: -107px;
+    top: -183px;
+    overflow: visible;
+}
+
+.group-47253 {
+    position: absolute;
+    inset: 0;
+}
+
+.group-37380 {
+    width: 3.95%;
+    height: 1.1%;
+    position: absolute;
+    right: 63.27%;
+    left: 32.78%;
+    bottom: 35.38%;
+    top: 63.51%;
+    overflow: visible;
+}
+
+.group {
+    position: absolute;
+    inset: 0;
+}
+
+.group2 {
+    width: 100%;
+    height: 470px;
+    position: absolute;
+    left: 0px;
+    top: 4617px;
+    overflow: visible;
+}
+
+.group3 {
+    width: 1166px;
+    height: 39px;
+    position: static;
+}
+
+/* ====== Section Backgrounds ====== */
+
+.rectangle-34624351 {
+    background: #f2fff7;
+    width: 100%;
+    height: 1547px;
+    position: absolute;
+    left: 0px;
+    top: 1041px;
+}
+
+.rectangle-34624350 {
+    background: #544ad1;
+    width: 100%;
+    height: 48px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.rectangle-34624521 {
+    border-radius: 16px;
+    flex-shrink: 0;
+    width: 328px;
+    height: 277px;
+    position: relative;
+    left: auto;
+    top: auto;
+}
+
+.rectangle-34624522 {
+    background: #ffffff;
+    width: 100%;
+    height: 985px;
+    position: absolute;
+    left: 0px;
+    top: 2567px;
+}
+
+/* ====== Generic Elements ====== */
+
+.vector {
+    flex-shrink: 0;
+    width: 18.5px;
+    height: 16px;
+    position: relative;
+    overflow: visible;
+}
+
+.pseudo-mask-group {
+    flex-shrink: 0;
+    width: 103.75px;
+    height: 32px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+/* ====== Dividers / Lines ====== */
+
+.line-18 {
+    margin-top: -1px;
+    border-style: solid;
+    border-color: var(--theme-secondary, #6c757d);
+    border-width: 1px 0 0 0;
+    opacity: 0.3;
+    flex-shrink: 0;
+    width: 66px;
+    height: 0px;
+    position: relative;
+    transform-origin: 0 0;
+    transform: rotate(90deg) scale(1, 1);
+}
+
+.line-17 {
+    margin-top: -1px;
+    border-style: solid;
+    border-color: var(--theme-secondary, #6c757d);
+    border-width: 1px 0 0 0;
+    opacity: 0.3;
+    flex-shrink: 0;
+    width: 66px;
+    height: 0px;
+    position: relative;
+    transform-origin: 0 0;
+    transform: rotate(90deg) scale(1, 1);
+}
+
+.line-19 {
+    margin-top: -1px;
+    border-style: solid;
+    border-color: var(--theme-secondary, #6c757d);
+    border-width: 1px 0 0 0;
+    opacity: 0.3;
+    flex-shrink: 0;
+    width: 66px;
+    height: 0px;
+    position: relative;
+    transform-origin: 0 0;
+    transform: rotate(90deg) scale(1, 1);
+}

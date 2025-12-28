@@ -1,0 +1,502 @@
+/* ============================================
+   TYPOGRAPHY.CSS
+   Purpose: Font styles, headings, text content,
+   gradient text effects, and text utilities
+   ============================================ */
+
+/* ====== Hero Text Styles ====== */
+
+.new-our-hrma-product-launch-soon {
+    background: linear-gradient(to left,
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.4)),
+        linear-gradient(90deg,
+            rgba(229, 156, 255, 1) 0.009999999747378752%,
+            rgba(186, 156, 255, 1) 50.01000165939331%,
+            rgba(156, 178, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.transform-your-business-with-expert-tech-solutions {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 46px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    position: relative;
+    align-self: stretch;
+}
+
+.from-finding-world-class-talent-to-building-scalable-cloud-infrastructure-we-re-your-end-to-end-technology-partner-for-growth-and-innovation {
+    color: #ffffff;
+    text-align: left;
+    font-family: "SourceSansPro-Regular", sans-serif;
+    font-size: 24px;
+    line-height: 161.7%;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    position: relative;
+    width: 669px;
+}
+
+/* ====== Announcement Bar Text ====== */
+
+.big-news-a-better-hr-experience-is-on-the-way-with-our-upcoming-hrma-launch {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    top: 12px;
+}
+
+/* ====== Navigation Text ====== */
+
+.text {
+    color: var(--backgrounds-primary, #ffffff);
+    text-align: left;
+    font-family: var(--text-md-medium-font-family, "Inter-Medium", sans-serif);
+    font-size: var(--text-md-medium-font-size, 16px);
+    line-height: var(--text-md-medium-line-height, 24px);
+    font-weight: var(--text-md-medium-font-weight, 500);
+    position: relative;
+}
+
+.text2 {
+    color: var(--primary-primary-700, #1d4fd7);
+    text-align: left;
+    font-family: var(--text-md-semibold-font-family, "Inter-SemiBold", sans-serif);
+    font-size: var(--text-md-semibold-font-size, 16px);
+    line-height: var(--text-md-semibold-line-height, 24px);
+    font-weight: var(--text-md-semibold-font-weight, 600);
+    position: relative;
+}
+
+.text3 {
+    color: var(--gray-gray-700, #384252);
+    text-align: left;
+    font-family: var(--text-md-semibold-font-family, "Inter-SemiBold", sans-serif);
+    font-size: var(--text-md-semibold-font-size, 16px);
+    line-height: var(--text-md-semibold-line-height, 24px);
+    font-weight: var(--text-md-semibold-font-weight, 600);
+    position: relative;
+}
+
+.text4 {
+    color: var(--white, #ffffff);
+    text-align: left;
+    font-family: var(--text-md-semibold-font-family, "Inter-SemiBold", sans-serif);
+    font-size: var(--text-md-semibold-font-size, 16px);
+    line-height: var(--text-md-semibold-line-height, 24px);
+    font-weight: var(--text-md-semibold-font-weight, 600);
+    position: relative;
+}
+
+.text5 {
+    color: var(--gray-gray-600, #5b6b86);
+    text-align: left;
+    font-family: var(--text-md-semibold-font-family, "Inter-SemiBold", sans-serif);
+    font-size: var(--text-md-semibold-font-size, 16px);
+    line-height: var(--text-md-semibold-line-height, 24px);
+    font-weight: var(--text-md-semibold-font-weight, 600);
+    position: relative;
+}
+
+/* ====== Services Section Text ====== */
+
+.our-services {
+    color: #000000;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    position: relative;
+}
+
+.comprehensive-tech-solutions-for-modern-businesses {
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 40px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    position: relative;
+    width: 962px;
+}
+
+.comprehensive-tech-solutions-for-modern-businesses-span {
+    color: #000000;
+}
+
+.comprehensive-tech-solutions-for-modern-businesses-span2 {
+    background: var(--ne,
+            linear-gradient(90deg,
+                rgba(13, 175, 105, 1) 40.86538553237915%,
+                rgba(197, 5, 255, 1) 75.96153616905212%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.we-deliver-end-to-end-technology-services-designed-to-help-businesses-scale-efficiently-innovate-faster-and-stay-competitive-in-a-rapidly-evolving-digital-landscape {
+    color: #4b5563;
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 24px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    position: relative;
+    width: 976px;
+}
+
+/* ====== Video Section Text ====== */
+
+.empowering-businesses-through-technology {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 32px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    position: relative;
+    align-self: stretch;
+}
+
+.discover-how-we-ve-helped-hundreds-of-companies-transform-their-operations-scale-their-teams-and-accelerate-growth-through-innovative-tech-solutions {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 20px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+    flex: 1;
+}
+
+/* ====== Testimonials Section Text ====== */
+
+.testimonials {
+    color: #000000;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 16px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    position: relative;
+}
+
+.what-our-clients-say {
+    color: #000000;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 40px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    position: relative;
+    align-self: stretch;
+}
+
+.real-experiences-from-companies-that-have-transformed-their-teams-and-technology-with-lam-stacks {
+    color: #4b5563;
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 24px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+.partnering-with-organization-was-one-of-the-best-decisions-we-ve-made-for-our-business-their-website-template-is-sleek-easy-to-customize-and-optimizes-performance-on-all-devices-our-customers-have-been-praising-the-new-design-and-we-ve-noticed-improved-engagement-metrics-across-the-board {
+    color: #1e1e1e;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+.our-online-store-s-sales-have-skyrocketed-after-working-with-company-the-template-they-provided-was-modern-user-friendly-and-fully-responsive-we-couldn-t-be-happier-with-the-results-their-support-throughout-the-process-was-exceptional {
+    color: #1e1e1e;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+.michael-turner {
+    color: #1e2e2e;
+    text-align: left;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.product-manager-at-cloud-sync {
+    color: #555555;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+}
+
+.emily-rogers {
+    color: #1e2e2e;
+    text-align: left;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.owner-of-style-boutique {
+    color: #555555;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+}
+
+/* ====== Stats Section Text ====== */
+
+.built-in-india-trusted-worldwide-we-re-here-24-7-support {
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 40px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    position: relative;
+    width: 871px;
+}
+
+.built-in-india-trusted-worldwide-we-re-here-24-7-support-span {
+    color: #000000;
+}
+
+.built-in-india-trusted-worldwide-we-re-here-24-7-support-span2 {
+    background: var(--cold-breeze,
+            linear-gradient(225.92deg,
+                rgba(51, 210, 255, 1) 0%,
+                rgba(61, 104, 222, 1) 53.74739170074463%,
+                rgba(152, 69, 232, 1) 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.the-core-values-and-principles-that-drive-us-to-deliver-excellence-across-continents {
+    color: #4b5563;
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 24px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+._500 {
+    background: var(--blue-moon,
+            linear-gradient(135deg, rgba(58, 66, 225, 1) 0%, rgba(98, 12, 144, 1) 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 46px;
+    line-height: 56px;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+._15 {
+    background: var(--blue-moon,
+            linear-gradient(135deg, rgba(58, 66, 225, 1) 0%, rgba(98, 12, 144, 1) 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 46px;
+    line-height: 56px;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clients-worldwide {
+    color: var(--body-text-body-color, #212529);
+    text-align: center;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.satisfaction-rate {
+    color: var(--body-text-body-color, #212529);
+    text-align: center;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.successful-placements {
+    color: var(--body-text-body-color, #212529);
+    text-align: center;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.years-of-excellence {
+    color: var(--body-text-body-color, #212529);
+    text-align: center;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ====== Footer Text ====== */
+
+.struggling-to-find-the-right-it-solutions {
+    color: #fafafa;
+    text-align: left;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+    position: relative;
+    width: 623px;
+}
+
+.we-ll-help-you-connect-with-the-right-talent-and-technology-partners-for-your-business-needs {
+    color: #fafafa;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 400;
+    position: relative;
+    width: 623px;
+}
+
+._2025-lamstacks-all-rights-reserved {
+    color: #000000;
+    text-align: left;
+    font-family: "Rubik-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+.term-of-service {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-Light", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    position: relative;
+}
+
+.policy-service {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-Light", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    position: relative;
+}
+
+.cookie-policy {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-Light", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    position: relative;
+}
+
+.faq {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-Light", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    position: relative;
+}
+
+/* ====== Learn More Link ====== */
+
+.learn-more {
+    color: #1f27ff;
+    text-align: left;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 20px;
+    line-height: 137.7%;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    position: relative;
+}

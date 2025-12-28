@@ -1,0 +1,64 @@
+/* ============================================
+   NAVBAR.CSS
+   Purpose: Header styles, navigation menu,
+   top announcement bar, and nav actions
+   ============================================ */
+
+/* ====== Header Container ====== */
+
+.header {
+    background: #ffffff;
+    border-radius: 900px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    top: 76px;
+}
+
+/* ====== Logo ====== */
+
+.group-2 {
+    flex-shrink: 0;
+    width: 167.08px;
+    height: 27.69px;
+    position: relative;
+    overflow: visible;
+}
+
+/* ====== Navigation Links ====== */
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.navigation-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* ====== Globe/Language Selector ====== */
+
+.globe {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: visible;
+}

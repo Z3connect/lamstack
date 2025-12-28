@@ -1,0 +1,488 @@
+/* ============================================
+   LAYOUT.CSS
+   Purpose: Container styles, frame wrappers,
+   grid layouts, and structural elements
+   ============================================ */
+
+/* ====== Main Content Containers ====== */
+
+.content {
+    flex-shrink: 0;
+    width: 711px;
+    height: 562.32px;
+    position: static;
+}
+
+.content2 {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.container2 {
+    padding: 0px 48px 0px 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 1280px;
+    position: relative;
+}
+
+/* ====== Frame Wrappers - Hero Section ====== */
+
+.frame-2147224456 {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    top: calc(50% - 324.16px);
+}
+
+.frame-2147224457 {
+    display: flex;
+    flex-direction: column;
+    gap: 83px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 711px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.frame-2147224460 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-2147224461 {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-2147224464 {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* ====== Frame Wrappers - Video Section ====== */
+
+.frame-2147224467 {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-2147224465 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 678px;
+    height: 159px;
+    position: relative;
+}
+
+/* ====== Frame Wrappers - Services Section ====== */
+
+.frame-2147224479 {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1154px;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    top: 1266px;
+}
+
+.frame-2147224477 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 962px;
+    position: relative;
+}
+
+.frame-2147224478 {
+    background: #ffffff;
+    border-radius: 90px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 169px;
+    position: relative;
+}
+
+.frame-2147224476 {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-2147224475 {
+    display: flex;
+    flex-direction: column;
+    gap: 68px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-2147224473 {
+    display: flex;
+    flex-direction: row;
+    gap: 68px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-2147224474 {
+    display: flex;
+    flex-direction: row;
+    gap: 68px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* ====== Frame Wrappers - Testimonials Section ====== */
+
+.frame-21472244802 {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 1694px;
+    height: 516.85px;
+    position: absolute;
+    left: 328px;
+    top: 2946.61px;
+}
+
+.frame-21472244772 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 711px;
+    height: 237.95px;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    top: 2655.54px;
+}
+
+.frame-2147224481 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* ====== Frame Wrappers - Stats Section ====== */
+
+.frame-1000002047 {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+    top: 50%;
+}
+
+.frame-21472244773 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 871px;
+    position: relative;
+}
+
+.frame-1000002046 {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* ====== Stats Divs ====== */
+
+.div {
+    padding: 16px 90px 16px 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 228px;
+    position: relative;
+}
+
+.div2 {
+    padding: 16px 90px 16px 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 238px;
+    position: relative;
+}
+
+.div3 {
+    padding: 16px 90px 16px 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 251px;
+    position: relative;
+}
+
+.div4 {
+    padding: 16px 90px 16px 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 225px;
+    position: relative;
+}
+
+/* ====== Frame Wrappers - Footer Section ====== */
+
+.frame-2147224487 {
+    display: flex;
+    flex-direction: row;
+    gap: 178px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    top: 50px;
+}
+
+.frame-2147224482 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 623px;
+    position: relative;
+}
+
+.frame-21472244612 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-165 {
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-166 {
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-215 {
+    display: flex;
+    flex-direction: row;
+    row-gap: 715px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    max-width: 1166px;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    top: 5008px;
+}
+
+.frame-192 {
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 313px;
+    position: relative;
+}
+
+.frame-1922 {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-173 {
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-172 {
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-174 {
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-175 {
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}

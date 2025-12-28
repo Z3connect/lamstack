@@ -1,0 +1,187 @@
+/* ============================================
+   BUTTONS.CSS
+   Purpose: All button variants, button bases,
+   and button text styles
+   ============================================ */
+
+/* ====== Primary Button ====== */
+
+.button {
+    background: #1f27ff;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    padding: 13px 28px 13px 28px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 223px;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-text {
+    color: var(--white-white, #ffffff);
+    text-align: center;
+    font-family: var(--body-medium-medium-font-family,
+            "Inter-Medium",
+            sans-serif);
+    font-size: var(--body-medium-medium-font-size, 16px);
+    line-height: var(--body-medium-medium-line-height, 24px);
+    font-weight: var(--body-medium-medium-font-weight, 500);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ====== Secondary/Outline Button ====== */
+
+.button2 {
+    border-radius: 6px;
+    border-style: solid;
+    border-color: var(--backgrounds-primary, #ffffff);
+    border-width: 1px;
+    padding: 13px 28px 13px 28px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+    width: 223px;
+}
+
+.button-text2 {
+    color: var(--backgrounds-primary, #ffffff);
+    text-align: center;
+    font-family: var(--body-medium-medium-font-family,
+            "Inter-Medium",
+            sans-serif);
+    font-size: var(--body-medium-medium-font-size, 16px);
+    line-height: var(--body-medium-medium-line-height, 24px);
+    font-weight: var(--body-medium-medium-font-weight, 500);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ====== Navigation Buttons ====== */
+
+.button3 {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-base {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* ====== CTA Button ====== */
+
+.button4 {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-base2 {
+    background: var(--primary-primary-700, #1d4fd7);
+    border-radius: 4px;
+    border-style: solid;
+    border-color: var(--primary-primary-700, #1d4fd7);
+    border-width: 1px;
+    padding: 10px 18px 10px 18px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    box-shadow: var(--shadow-xs-box-shadow,
+            0px 1px 2px 0px rgba(10, 13, 18, 0.05));
+    overflow: hidden;
+}
+
+/* ====== Language Selector Button ====== */
+
+.button5 {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-base3 {
+    border-radius: 8px;
+    padding: 10px 18px 10px 18px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ====== Footer CTA Button ====== */
+
+.button6 {
+    background: var(--backgrounds-primary, #ffffff);
+    border-radius: 6px;
+    padding: 13px 28px 13px 28px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 223px;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-text3 {
+    color: var(--grays-black, #000000);
+    text-align: center;
+    font-family: var(--body-medium-medium-font-family,
+            "Inter-Medium",
+            sans-serif);
+    font-size: var(--body-medium-medium-font-size, 16px);
+    line-height: var(--body-medium-medium-line-height, 24px);
+    font-weight: var(--body-medium-medium-font-weight, 500);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,236 @@
+/* ============================================
+   FOOTER.CSS
+   Purpose: Footer container, CTA banner,
+   footer links, and copyright section
+   ============================================ */
+
+/* ====== Footer Container ====== */
+
+.footer-17 {
+    width: 1440px;
+    height: 491px;
+    position: absolute;
+    left: -6px;
+    top: 4130px;
+}
+
+/* ====== Footer Shadow Effect ====== */
+
+.frame-164 {
+    background: rgba(12, 22, 49, 0.59);
+    width: 1048px;
+    height: 115px;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    top: 309px;
+    filter: blur(28px);
+}
+
+/* ====== Footer CTA Banner ====== */
+
+.frame-160 {
+    background: var(--dark-alpine,
+            linear-gradient(46.42deg, rgba(15, 95, 75, 1) 0%, rgba(9, 21, 47, 1) 100%));
+    border-radius: 24px;
+    width: 1216px;
+    height: 323px;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    top: 84px;
+    box-shadow: 0px 24px 33px 0px rgba(12, 22, 49, 0.25);
+}
+
+/* ====== Footer Content ====== */
+
+.footer-content-wrapper {
+    width: 1440px;
+    background: #FAFAFA;
+    padding: 540px 100px 60px 100px;
+    /* Increased to 540px to clear CTA */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 4130px;
+    /* Aligned with CTA container top */
+    left: 0;
+    z-index: 5;
+}
+
+.footer-main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1240px;
+    gap: 40px;
+    color: #1F2937;
+    font-family: "Inter", sans-serif;
+}
+
+.footer-col-brand {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo {
+    width: 180px;
+}
+
+.footer-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4B5563;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-label {
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons span {
+    font-size: 20px;
+    color: #1D4FD7;
+    /* Primary Brand Color */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.social-icons span:hover {
+    color: #0F172A;
+    /* Darker on hover */
+}
+
+.copyright-desktop {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #9CA3AF;
+}
+
+.footer-col-links,
+.footer-col-services,
+.footer-col-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-col-links h3,
+.footer-col-services h3,
+.footer-col-contact h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.footer-col-links ul,
+.footer-col-services ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-col-links li,
+.footer-col-services li {
+    font-size: 16px;
+    color: #4B5563;
+    cursor: pointer;
+}
+
+.contact-item {
+    font-size: 16px;
+    color: #4B5563;
+}
+
+.contact-address {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4B5563;
+}
+
+/* Adjustments for absolute positioning context */
+.footer-17 {
+    /* Keeping original container but content is now below */
+    z-index: 10;
+}
+
+/* Responsive Footer */
+@media (max-width: 1439px) {
+    .footer-content-wrapper {
+        width: 100%;
+        top: 4130px;
+        padding: 540px 40px 60px 40px;
+        /* Increased to 540px to match desktop clearance */
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Mobile Flow (<768px matches section flow) */
+    .footer-17 {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .frame-160 {
+        position: relative;
+        top: auto;
+        translate: none;
+        left: auto;
+        margin-bottom: -150px;
+        /* Pull footer content up or banner down? */
+        z-index: 20;
+    }
+
+    .footer-content-wrapper {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        padding: 180px 20px 40px 20px;
+        /* Top padding for CTA overlap */
+        background: #FAFAFA;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-main-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-col-brand {
+        width: 100%;
+    }
+
+    .footer-col-links,
+    .footer-col-services,
+    .footer-col-contact {
+        width: 100%;
+    }
+}
